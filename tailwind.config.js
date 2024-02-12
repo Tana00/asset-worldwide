@@ -21,6 +21,10 @@ module.exports = {
         "green-light": "#F0FFF7",
         "gray-primary": "#373737",
         "blue-black": "#03070D",
+        "gold-light": "#FAF5EB",
+        "green-100": "#044625",
+        "gray-light": "#F7F7F7F7",
+        grey: "#666666",
       },
       background: {
         dark: "#333",

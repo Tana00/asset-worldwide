@@ -77,7 +77,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="hidden xl:flex items-center justify-center gap-20">
+      <div className="hidden xl:flex items-center justify-center gap-14 mx-8">
         {links.map((link, index) => {
           const { id, url, text, subLinks } = link;
           return (
@@ -117,7 +117,7 @@ const Navbar = () => {
       {/*  Add a book Appointment button */}
       <Link
         href="/book-appointment"
-        className="hidden xl:flex bg-primary-green ml-12 text-white rounded-md font-avenir text-base font-semibold py-2.5 px-4 hover:bg-primary-gold transition duration-300"
+        className="hidden xl:flex bg-primary-green ml-12 text-white rounded-md font-avenir text-base font-semibold py-2.5 px-4 hover:bg-primary-gold hover:text-white transition duration-300"
       >
         Book Appointment
       </Link>
@@ -198,7 +198,7 @@ const Navbar = () => {
             })}
             <Link
               href="/book-appointment"
-              className="bg-white text-primary-green rounded-lg font-avenir text-[18px] py-3.5 px-6 hover:bg-primary-gold transition duration-300"
+              className="bg-white text-primary-green rounded-lg font-avenir text-[18px] py-3.5 px-6 hover:bg-primary-gold hover:text-white transition duration-300"
             >
               Book Appointment
             </Link>

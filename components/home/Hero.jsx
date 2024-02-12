@@ -4,7 +4,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <div className="w-full mt-6 min-h-screen overflow-x-hidden">
-      <div className="w-full flex items-start justify-start flex-col xl:w-10/12 3xl:w-11/12 bg-green-light py-14 lg:px-20 mx-auto hero-container">
+      <div className="w-full flex items-start justify-start flex-col xl:w-11/12 bg-green-light py-14 lg:px-20 mx-auto hero-container">
         <div className="flex flex-col sm:w-full mx-4 sm:mx-8 xl:mx-0 3xl:w-3/5 gap-3 xl:gap-4">
           <p className="text-primary-gold font-Avenir-Heavy font-semibold text-sm md:text-lg">
             Welcome To Assets Worldwide Real Estate
@@ -22,7 +22,7 @@ const Hero = () => {
 
           <Link
             href="book-appoinment"
-            className="md:mt-6 flex items-center justify-center bg-primary-green text-[#fafafb] text-center xl:py-2 xl:px-4 rounded-lg font-Avenir-heavy font-bold w-fit px-8 py-3.5 sm:text-base xl:w-[210px] xl:h-[56px] xl:text-lg hover:bg-primary-gold transition duration-300"
+            className="md:mt-6 flex items-center justify-center bg-primary-green text-[#fafafb] text-center xl:py-2 xl:px-4 rounded-lg font-Avenir-heavy font-bold w-fit px-8 py-3.5 sm:text-base xl:w-[210px] xl:h-[56px] xl:text-lg hover:bg-primary-gold hover:text-white transition duration-300"
           >
             Book Appoinment
           </Link>

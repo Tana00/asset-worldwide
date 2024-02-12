@@ -60,6 +60,18 @@ body {
   height: 100%;
   object-fit: contain;
 }
+.mission {
+  background-image: url("/images/mission.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+.vision {
+  background-image: url("/images/vision.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
 @media (max-width: 768px) {
   .hero-container {
     min-height: 150vh;

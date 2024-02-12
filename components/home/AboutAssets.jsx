@@ -1,7 +1,6 @@
-import React from "react";
-import aboutAsset from "../../public/images/about-assets.png";
 import Image from "next/image";
 import Link from "next/link";
+import aboutAsset from "../../public/images/about-assets.png";
 
 const AboutAssets = () => {
   return (
@@ -22,7 +21,7 @@ const AboutAssets = () => {
           </p>
           <Link
             href="/learn-more"
-            className="flex items-center justify-center mt-6 bg-primary-green text-[#fafafb] font-bold text-center py-2 px-4 rounded-lg font-Avenir-Regular text-sm sm:text-lg w-[201px] 2xl:w-[147px] sm:h-14 h-12 hover:bg-primary-gold transition duration-300"
+            className="flex items-center justify-center mt-6 bg-primary-green text-[#fafafb] font-bold text-center py-2 px-4 rounded-lg font-Avenir-Regular text-sm sm:text-lg w-[201px] 2xl:w-[147px] sm:h-14 h-12 hover:bg-primary-gold hover:text-white transition duration-300"
           >
             Learn More
           </Link>

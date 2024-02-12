@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import Navbar from "../components/home/Navbar";
-import Footer from "../components/home/Footer";
-import "./globals.css";
+import Navbar from "@/components/home/Navbar";
+import Footer from "@/components/home/Footer";
+import "../globals.css";
 
 const metadata = {
   title: "Assets Worldwide",
@@ -15,12 +15,12 @@ export default function RootLayout({ children }) {
   const [toastMessage, setToastMessage] = useState("");
 
   return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        <div className="">{children}</div>
-        <Footer />
-      </body>
-    </html>
+    // <html lang="en">
+    //   <body>
+    //     <Navbar />
+    <div className="">{children}</div>
+    //       <Footer />
+    //     </body>
+    //   </html>
   );
 }

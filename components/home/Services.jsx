@@ -76,7 +76,7 @@ const Services = () => {
                 </div>
                 <Link
                   href="/learn-more"
-                  className="flex items-center justify-center bg-primary-gold text-[#fafafb] text-center xl:px-4 rounded-lg font-Avenir-Regular font-bold text-sm w-fit px-6 py-3 xl:w-[147px] xl:h-12 xl:text-[16px] hover:bg-primary-gold transition duration-300"
+                  className="flex items-center justify-center bg-primary-gold text-[#fafafb] text-center xl:px-4 rounded-lg font-Avenir-Regular font-bold text-sm w-fit px-6 py-3 xl:w-[147px] xl:h-12 xl:text-[16px] hover:bg-primary-gold hover:text-white transition duration-300"
                 >
                   Learn More
                 </Link>

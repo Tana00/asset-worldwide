@@ -1,18 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./app/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: {
+      TrajanRegular: ["Trajan Pro Regular", "serif"],
+      Trajan: ["Trajan", "serif"],
+      'Avenir-Regular': ['Avenir Regular', 'sans-serif'],
+      'Avenir-Black': ['Avenir Black', 'sans-serif'],
+      'Avenir-Medium': ['Avenir Medium', 'sans-serif'],
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        "primary-green": "#006633",
+        "primary-gold": "#CC9933",
+        "gold-light": "#FCF9F3",
+        "black": "#333333",
+        "green-light": "#F0FFF7",
+      },
+      background: {
+        dark: "#333",
+      },
+      textColor: {
+        dark: "#fff",
       },
     },
   },
   plugins: [],
+  darkMode: "class",
 };

@@ -2,32 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+  font-family: 'Avenir Regular', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'Trajan';
+  src: url('../public/fonts/TrajanPro-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: 'TrajanRegular';
+  src: url('/fonts/TrajanPro-Regular.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@font-face {
+  font-family: 'Avenir Regular';
+  src: url('/fonts/Avenir Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Medium';
+  src: url('/fonts/Avenir Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Black';
+  src: url('/fonts/Avenir Black.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.hero-container{
+  background-image: url('/images/hero-image.png');
+  background-size: 100% 80%;
+  background-repeat: no-repeat;
+  background-position:right bottom;
+  min-height: 125svh ;
+  height: 100%;
 }

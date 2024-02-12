@@ -1,9 +1,10 @@
-import Hero from "./components/Hero";
-import AboutAssets from "./components/AboutAssets";
-import Services from "./components/Services";
-import Works from "./components/Works";
-import Experiences from "./components/Experiences";
-import Cta from "./components/Cta";
+import Hero from "../components/home/Hero";
+import AboutAssets from "../components/home/AboutAssets";
+import Services from "../components/home/Services";
+import Works from "../components/home/Works";
+import Experiences from "../components/home/Experiences";
+import Cta from "../components/home/Cta";
+
 export default function Home() {
   return (
     <main className="">

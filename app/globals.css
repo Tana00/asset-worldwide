@@ -2,68 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
-body{
-  font-family: 'Avenir Regular', sans-serif;
+body {
+  font-family: "Avenir Regular", sans-serif;
+}
+.disable_scroll {
+  overflow-y: hidden !important;
 }
 
 @font-face {
-  font-family: 'Trajan';
-  src: url('../public/fonts/TrajanPro-Bold.otf') format('opentype');
+  font-family: "Trajan";
+  src: url("../public/fonts/TrajanPro-Bold.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'TrajanRegular';
-  src: url('/fonts/TrajanPro-Regular.ttf') format('truetype');
+  font-family: "TrajanRegular";
+  src: url("/fonts/TrajanPro-Regular.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
-=======
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 214, 219, 220;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 0, 0, 0;
+@font-face {
+  font-family: "Avenir Regular";
+  src: url("/fonts/Avenir Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Medium";
+  src: url("/fonts/Avenir Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Heavy";
+  src: url("/fonts/Avenir Heavy.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Black";
+  src: url("/fonts/Avenir Black.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.hero-container {
+  background-image: url("/images/hero-image2.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  min-height: 125vh;
+  height: 100%;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .hero-container {
+    min-height: 150vh;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--foreground-rgb));
->>>>>>> f38d154257ac003846d80f9fd9b8b917b2c76b30
-}
-
-@font-face {
-  font-family: 'Avenir Regular';
-  src: url('/fonts/Avenir Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Avenir Medium';
-  src: url('/fonts/Avenir Medium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Avenir Black';
-  src: url('/fonts/Avenir Black.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.hero-container{
-  background-image: url('/images/hero-image.png');
-  background-size: 100% 80%;
-  background-repeat: no-repeat;
-  background-position:right bottom;
-  min-height: 125svh ;
-  height: 100%;
+.keen-slider:not([data-keen-slider-disabled]),
+.keen-slider:not([data-keen-slider-disabled]) .keen-slider__slide {
+  overflow-y: visible !important;
 }

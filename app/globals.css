@@ -51,35 +51,61 @@ body {
   font-style: normal;
 }
 
-.hero-container {
-  background-image: url("/images/hero-image.svg");
-  background-size: 100% 100%;
+.why_us_cta {
+  background-image: url("/images/why-us-cta.svg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: right bottom;
-  /* min-height: 100vh; */
+  background-position: center;
+  z-index: 1;
+}
+/* .mission {
+  max-height: 738px;
+  background: linear-gradient(180deg, #f0fff7 0%, #edffd1 123.31%),
+    url("/images/mission.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
   height: 100%;
-  object-fit: cover;
-}
-.mission {
-  background-image: url("/images/mission.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-}
-.vision {
-  background-image: url("/images/vision.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-}
-/* @media only screen and (min-width: 768px) and (max-width: 1441px) {
-  .hero-container {
-    min-height: 100vh;
-  }
 } */
-@media only screen and (max-width: 768px) {
-  .hero-container {
-    min-height: 150vh;
+
+.mission,
+.vision {
+  position: relative;
+  height: 100%;
+}
+
+.mission::before,
+.vision::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  z-index: -1;
+}
+.mission::before {
+  background-image: url("/images/mission.svg"),
+    linear-gradient(180deg, #f0fff7 0%, #edffd1 123.31%);
+}
+.vision::before {
+  background-image: url("/images/vision.svg"),
+    linear-gradient(180deg, #f0fff7 0%, #d2fffa 100%);
+}
+
+/* .vision {
+  max-height: 738px;
+  height: 100%;
+  background: linear-gradient(180deg, #f0fff7 0%, #d2fffa 100%);
+} */
+@media (min-width: 2000px) {
+  .vision,
+  .mission {
+    /* max-height: 850px; */
+    height: 100%;
   }
 }
 
@@ -89,4 +115,7 @@ body {
 }
 video {
   object-fit: cover;
+}
+.cta_clip {
+  clip-path: polygon(37% 0, 100% 0%, 100% 100%, 0% 100%);
 }

@@ -93,7 +93,7 @@ const Navbar = () => {
               {showMenu && subLinks && (
                 <div
                   className="flex flex-col gap-2
-                 absolute top-[30px] left-0 bg-white shadow-lg py-4 px-4 rounded-md z-10 w-[200px]"
+                 absolute top-[30px] left-0 bg-white shadow-lg py-4 px-4 rounded-md z-20 w-[200px]"
                 >
                   {subLinks.map((subLink) => {
                     const { id, url, text } = subLink;
@@ -102,6 +102,10 @@ const Navbar = () => {
                         key={id}
                         href={url}
                         className="px-2 py-2 w-max text-gray-primary font-Avenir-Medium text-[18px] hover:text-primary-gold transition duration-300"
+                        onClick={() => {
+                          setShowMenu(!showMenu);
+                          setShow(false);
+                        }}
                       >
                         {text}
                       </Link>
@@ -177,7 +181,7 @@ const Navbar = () => {
                   {showMenu && link.subLinks && (
                     <div
                       className="flex flex-col gap-2
-                       absolute top-[30px] left-0  bg-white shadow-lg py-4 px-4 rounded-md z-10 w-[200px]"
+                       absolute top-[30px] left-0  bg-white shadow-lg py-4 px-4 rounded-md z-20 w-[200px]"
                     >
                       {link.subLinks.map((subLink) => {
                         const { id, url, text } = subLink;

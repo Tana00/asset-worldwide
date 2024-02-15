@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="w-full mt-6 overflow-x-hidden">
       <div className="relative w-full h-full flex items-start justify-start flex-col xl:w-11/12 bg-green-light mx-auto rounded-2xl">
-        <div className="z-10 flex flex-col sm:w-full py-14 lg:px-10 xl:px-20 mx-4 sm:mx-8 xl:mx-0 xl:w-4/5 3xl:w-3/5 gap-2 xs:gap-3 xl:gap-4">
+        <div className="z-10 flex flex-col sm:w-full py-14 lg:px-10 xl:px-20 mx-4 sm:mx-8 xl:mx-0 xl:w-4/5 3xl:w-3/4 gap-2 xs:gap-3 xl:gap-4">
           <p className="text-primary-gold font-Avenir-Heavy font-semibold text-sm md:text-lg">
             Welcome To Assets Worldwide Real Estate
           </p>

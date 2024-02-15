@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import img2 from "@/public/images/male-avatar.svg";
 import img1 from "@/public/images/female-avatar.svg";
+import FadeIn from "../FadeIn";
 
 const teamList = [
   {
@@ -57,47 +58,49 @@ const teamList = [
 
 const Team = () => {
   return (
-    <div className="mt-8 lg:pb-20">
-      <div className="w-full min-h-screen pb-6 md:pt-4 xl:py-12 bg-gold-light">
-        <div className="w-full lg:w-4/5 py-6 px-2 md:px-8 mx-auto mt-8 flex flex-col justify-center items-center text-center gap-14">
-          <div className="flex flex-col gap-3 px-4 md:px-16 font-light justify-center items-center text-center">
-            <h2 className="text-primary-gold text-2xl md:text-[2rem] lg:text-[2.5rem] font-bold sm:leading-[80px] font-Trajan ">
-              MEET THE TEAM
-            </h2>
-            <p className="text-black text-sm !leading-6 sm:text-lg font-light sm:!leading-8 w-full 2xl:w-3/5 3xl:px-10 mx-auto font-Avenir-Regular">
-              Who are the people who make up Asset Worldwide
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-10 xl:gap-y-10 3xl:gap-y-16">
-            {teamList.map((member) => (
-              <div
-                key={member.id}
-                className="w-11/12 h-[600px] mx-auto flex flex-col items-center gap-4 py-6 rounded-lg bg-white border-b-4 border-primary-gold"
-              >
-                <div className="w-full flex items-center justify-center border-primary-gold border-b py-4">
-                  <Image
-                    src={member.img}
-                    alt={member.name}
-                    className="w-28 h-44 object-contain"
-                  />
+    <FadeIn>
+      <div className="mt-8 lg:pb-20">
+        <div className="w-full min-h-screen pb-6 md:pt-4 xl:py-12 bg-gold-light">
+          <div className="w-full lg:w-4/5 py-6 px-2 md:px-8 mx-auto mt-8 flex flex-col justify-center items-center text-center gap-14">
+            <div className="flex flex-col gap-3 px-4 md:px-16 font-light justify-center items-center text-center">
+              <h2 className="text-primary-gold text-2xl md:text-[2rem] lg:text-[2.5rem] font-bold sm:leading-[80px] font-Trajan ">
+                MEET THE TEAM
+              </h2>
+              <p className="text-black text-sm !leading-6 sm:text-lg font-light sm:!leading-8 w-full 3xl:px-10 mx-auto font-Avenir-Regular">
+                Who are the people who make up Asset Worldwide
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 4xl:grid-cols-4 gap-y-10 gap-x-4 md:gap-10 xl:gap-y-10 3xl:gap-y-16">
+              {teamList.map((member) => (
+                <div
+                  key={member.id}
+                  className="w-11/12 h-[600px] mx-auto flex flex-col items-center gap-4 py-6 rounded-lg bg-white border-b-4 border-primary-gold"
+                >
+                  <div className="w-full flex items-center justify-center border-primary-gold border-b py-4">
+                    <Image
+                      src={member.img}
+                      alt={member.name}
+                      className="w-28 h-44 object-contain"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2 py-4 px-6">
+                    <h3 className="text-primary-gold text-base md:text-xl font-Avenir-Heavy font-bold">
+                      {member.name}
+                    </h3>
+                    <h3 className="text-grey text-xs xl:text-sm font-bold">
+                      {member.title}
+                    </h3>
+                    <p className="mt-4 text-[#000] text-sm xl:text-base 2xl:text-[17px] !leading-8 font-light 3xl:w-2/3 mx-auto font-Avenir-Regular">
+                      {member.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="flex flex-col gap-2 py-4 px-6">
-                  <h3 className="text-primary-gold text-base md:text-xl font-Avenir-Heavy font-bold">
-                    {member.name}
-                  </h3>
-                  <h3 className="text-grey text-xs xl:text-sm font-bold">
-                    {member.title}
-                  </h3>
-                  <p className="mt-4 text-[#000] text-sm xl:text-base 2xl:text-[17px] !leading-8 font-light 3xl:w-2/3 mx-auto font-Avenir-Regular">
-                    {member.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </FadeIn>
   );
 };
 

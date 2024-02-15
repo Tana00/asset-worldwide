@@ -1,6 +1,7 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
-import aboutAsset from "../../public/images/about-assets.png";
+import { AboutVideo } from "../About-Video";
 
 const AboutAssets = () => {
   return (
@@ -26,13 +27,7 @@ const AboutAssets = () => {
             Learn More
           </Link>
         </div>
-        <div className="w-full h-40 md:h-auto">
-          <Image
-            src={aboutAsset}
-            alt="about-assets"
-            className="w-full h-full"
-          />
-        </div>
+        <AboutVideo />
       </div>
     </div>
   );

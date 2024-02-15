@@ -52,13 +52,13 @@ body {
 }
 
 .hero-container {
-  background-image: url("/images/hero-image2.png");
+  background-image: url("/images/hero-image.svg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: right bottom;
-  min-height: 125vh;
+  /* min-height: 100vh; */
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .mission {
   background-image: url("/images/mission.svg");
@@ -86,4 +86,7 @@ body {
 .keen-slider:not([data-keen-slider-disabled]),
 .keen-slider:not([data-keen-slider-disabled]) .keen-slider__slide {
   overflow-y: visible !important;
+}
+video {
+  object-fit: cover;
 }

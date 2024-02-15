@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import aboutAsset from "@/public/images/about-assets.png";
+import { AboutVideo } from "../About-Video";
 
 const Hero = () => {
   return (
@@ -28,11 +29,7 @@ const Hero = () => {
           </Link>
         </div>
         <div className="w-11/12 object-cover h-52 sm:h-auto lg:w-10/12 mt-6 lg:absolute lg:bottom-[-10rem] xl:bottom-[-12rem]">
-          <Image
-            src={aboutAsset}
-            alt="about-assets"
-            className="w-full h-full"
-          />
+          <AboutVideo />
         </div>
       </div>
     </div>

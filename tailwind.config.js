@@ -37,6 +37,7 @@ module.exports = {
         avenir: ["var(--font-avenir)"],
       },
       screens: {
+        xxs: "375px",
         xs: "440px",
         "3xl": "1800px",
         "4xl": "2000px",

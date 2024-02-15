@@ -95,11 +95,11 @@ const Navbar = () => {
                   className="flex flex-col gap-2
                  absolute top-[30px] left-0 bg-white shadow-lg py-4 px-4 rounded-md z-10 w-[200px]"
                 >
-                  {subLinks.map((subLink, index) => {
+                  {subLinks.map((subLink) => {
                     const { id, url, text } = subLink;
                     return (
                       <Link
-                        key={index}
+                        key={id}
                         href={url}
                         className="px-2 py-2 w-max text-gray-primary font-Avenir-Medium text-[18px] hover:text-primary-gold transition duration-300"
                       >
@@ -146,7 +146,7 @@ const Navbar = () => {
       </div>
 
       {show && (
-        <div className="flex flex-col gap-10 absolute top-0 left-0 w-full h-screen bg-primary-green z-[1]">
+        <div className="flex flex-col gap-10 absolute top-0 left-0 w-full h-screen bg-primary-green z-20">
           <div className="flex justify-end items-center px-4 md:px-32 h-[100px] z-auto">
             <div className="cursor-pointer" onClick={toggleMenu}>
               <Image src={closeIcon} alt="close" className="w-10 h-10" />
@@ -170,7 +170,7 @@ const Navbar = () => {
                     className="text-white font-avenir text-2xl hover:text-primary-gold transition duration-300"
                     onClick={() => setShowMenu(!showMenu)}
                   >
-                    {text}{" "}
+                    {text}
                     {link.subLinks && <IoCaretDownOutline className="inline" />}
                   </Link>
 
@@ -179,13 +179,17 @@ const Navbar = () => {
                       className="flex flex-col gap-2
                        absolute top-[30px] left-0  bg-white shadow-lg py-4 px-4 rounded-md z-10 w-[200px]"
                     >
-                      {link.subLinks.map((subLink, index) => {
+                      {link.subLinks.map((subLink) => {
                         const { id, url, text } = subLink;
                         return (
                           <Link
-                            key={index}
+                            key={id}
                             href={url}
                             className="px-2 py-2 w-max text-gray-primary font-Avenir-Medium text-[18px] hover:text-primary-gold transition duration-300"
+                            onClick={() => {
+                              setShow(!show);
+                              setShowMenu(!showMenu);
+                            }}
                           >
                             {text}
                           </Link>

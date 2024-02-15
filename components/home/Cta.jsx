@@ -23,7 +23,7 @@ const Cta = () => {
           </p>
           <Link
             href="/learn-more"
-            className="flex items-center justify-center text-primary-green bg-white font-Avenir-Black text-center py-2 px-6 h-14 rounded-lg w-max text-base lg:text-[18px] hover:bg-primary-gold hover:text-white transition duration-300"
+            className="flex items-center justify-center text-primary-green bg-white text-center py-2 px-6 h-14 rounded-lg w-max font-Avenir-Heavy font-bold text-base lg:text-[18px] hover:bg-primary-gold hover:text-white transition duration-300"
           >
             Book Appoinment
           </Link>

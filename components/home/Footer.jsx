@@ -25,7 +25,7 @@ const Footer = () => {
               <Link href="/why-us" className="hover:text-primary-gold">
                 Why Us
               </Link>
-              <Link href="/our-portfolio" className="hover:text-primary-gold">
+              <Link href="/case-studies" className="hover:text-primary-gold">
                 Our Portfolio
               </Link>
             </div>

@@ -24,7 +24,7 @@ const links = [
       },
       {
         id: 3,
-        url: "/our-team",
+        url: "/about-us#meet-the-team",
         text: "Meet The Team",
       },
     ],
@@ -83,7 +83,10 @@ const Navbar = () => {
           if (subLinks) {
             return (
               <div key={id} className="relative group">
-                <p className="text-gray-primary font-Avenir-Medium text-[18px] hover:text-primary-gold transition duration-300">
+                <p
+                  onClick={() => setShowMenu(!showMenu)}
+                  className="cursor-pointer text-gray-primary font-Avenir-Medium text-[18px] hover:text-primary-gold transition duration-300"
+                >
                   {text} {subLinks && <IoCaretDownOutline className="inline" />}
                 </p>
                 {showMenu && subLinks && (
@@ -178,7 +181,10 @@ const Navbar = () => {
               if (subLinks) {
                 return (
                   <div key={id} className="relative">
-                    <p className="text-white font-avenir text-2xl hover:text-primary-gold transition duration-300">
+                    <p
+                      onClick={() => setShowMenu(!showMenu)}
+                      className="cursor-pointer text-white font-avenir text-2xl hover:text-primary-gold transition duration-300"
+                    >
                       {text}
                       {subLinks && <IoCaretDownOutline className="inline" />}
                     </p>

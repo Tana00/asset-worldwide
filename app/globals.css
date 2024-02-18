@@ -166,11 +166,9 @@ video {
   cursor: default;
 }
 
-
-.blog-image{
-    background: url("/images/blog-image.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    
+.blog-image {
+  background: url("/images/blog-image.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }

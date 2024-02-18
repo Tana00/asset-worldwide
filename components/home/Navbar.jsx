@@ -41,12 +41,12 @@ const links = [
   },
   {
     id: 4,
-    url: "#",
+    url: "/faqs",
     text: "FAQs",
   },
   {
     id: 5,
-    url: "#",
+    url: "blogs",
     text: "Blogs",
   },
 ];
@@ -57,6 +57,7 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setShow(!show);
+    setShowMenu(false);
   };
 
   useEffect(() => {

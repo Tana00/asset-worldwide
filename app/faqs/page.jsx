@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import faqImage from "../../public/images/faq.png";
 import Cta from "@/components/home/Cta";
+
 const faqs = [
   {
     question: "What services does Asset Worldwide provide?",
@@ -46,25 +47,25 @@ const page = () => {
   return (
     <div className="w-full min-h-screen pb-8 bg-white">
       <div className="w-full h-full py-6 px-4 mb-16 md:mb-32 xl:px-8 mx-auto mt-8 flex flex-col justify-center items-center  gap-14">
-        <div className="w-full h-max md:h-[60vh] bg-primary-green rounded-xl flex flex-col md:flex-row gap-2 justify-end items-end py-6 px-8">
+        <div className="w-full h-max md:h-[60vh] bg-primary-green rounded-xl flex flex-col md:flex-row gap-6 md:gap-2 justify-end items-start md:items-end py-6 px-4 sm:px-8">
           <div className="flex flex-col h-full gap-4 justify-center flex-1">
-            <h2 className="font-Trajan sm:tracking-wider text-white text-3xl leading-[45px] xs:leading-[55px] xs:text-[2.2rem] font-bold md:leading-[80px] xl:leading-[78px] md:text-[3rem] xl:text-[4rem] 2xl:text-[4.5rem] 2xl:leading-[85px] sm:w-4/5">
+            <h2 className="font-Trajan sm:tracking-wider text-white text-3xl leading-[45px] xs:leading-[55px] xs:text-[2.2rem] font-bold md:leading-[60px] lg:leading-[80px] xl:leading-[78px] md:text-[2.5rem] lg:text-[3rem] xl:text-[4rem] 2xl:text-[4.5rem] 2xl:leading-[85px] sm:w-4/5">
               FREQUENTLY
               <br />
               ASKED QUESTIONS
             </h2>
-            <p className="w-full md:w-1/2 text-white text-sm md:text-[1.125rem] leading-[32px] font-Avenir-Regular">
+            <p className="w-full md:w-4/5 lg:w-1/2 text-white text-sm md:text-[1.125rem] leading-[32px] font-Avenir-Regular">
               Everything you need to know about Asset Worldwide
             </p>
 
             <Link
               href="book-appoinment"
-              className="mt-3 3xl:mt-8 flex items-center justify-center text-primary-green bg-[#fafafb] text-center xl:py-2 xl:px-4 rounded-lg font-Avenir-heavy font-bold w-fit px-8 py-3.5 sm:text-base xl:w-[210px] xl:h-[56px] xl:text-lg hover:bg-primary-gold hover:text-white transition duration-300"
+              className="sm:mt-3 3xl:mt-8 flex items-center justify-center text-primary-green bg-[#fafafb] text-center xl:py-2 xl:px-4 rounded-lg font-Avenir-heavy font-bold w-fit px-8 py-3.5 sm:text-base xl:w-[210px] xl:h-[56px] xl:text-lg hover:bg-primary-gold hover:text-white transition duration-300"
             >
               Book Appoinment
             </Link>
           </div>
-          <div className=" w-1/2 md:w-auto h-1/4 md:h-full flex-2 flex items-end justify-end ">
+          <div className="w-2/6 lg:w-1/2 xl:w-auto h-1/4 md:h-full flex-2 flex items-end justify-end ">
             <Image
               src={faqImage}
               alt="faq"
@@ -78,17 +79,17 @@ const page = () => {
               key={index}
               className="w-full h-full flex flex-col gap-4 py-6 px-3 md:px-8 border border-[#cbefa9] rounded-lg "
             >
-              <p className="text-black text-[1rem] md:text-[1.125rem] lg:text-[1.125rem] font-bold font-Avenir-Heavy">
+              <p className="text-black text-base lg:text-[1.125rem] xl:text-[1.125rem] font-bold font-Avenir-Heavy">
                 {faq.question}
               </p>
-              <p className="text-[#666666] text-sm md:text-[1.125rem] leading-[32px] font-Avenir-Regular">
+              <p className="text-[#666666] text-sm lg:text-[1.125rem] leading-7 md:leading-[32px] font-Avenir-Regular">
                 {faq.answer}
               </p>
             </div>
           ))}
         </div>
       </div>
-        <Cta />
+      <Cta />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import AboutAssets from "../components/home/AboutAssets";
 import Services from "../components/home/Services";
 import Works from "../components/home/Works";
 import Experiences from "../components/home/Experiences";
+import TestimonialSlider from "@/components/home/testimonial";
 import Cta from "../components/home/Cta";
 
 export default function Home() {
@@ -12,7 +13,8 @@ export default function Home() {
       <AboutAssets />
       <Services />
       <Works />
-      <Experiences />
+      {/* <Experiences /> */}
+      <TestimonialSlider />
       <Cta />
     </main>
   );

@@ -8,7 +8,7 @@ import img2 from "../../public/images/exp-2.png";
 import img3 from "../../public/images/exp-3.png";
 import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 
-const customersList = [
+export const customersList = [
   {
     id: 1,
     name: "Emily and James T",

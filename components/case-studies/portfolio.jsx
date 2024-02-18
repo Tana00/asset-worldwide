@@ -66,8 +66,6 @@ export const Portfolio = () => {
     return res;
   }, [pageIndex]);
 
-  console.log(portfolioList?.length);
-
   return (
     <div className="w-full min-h-screen pb-12 bg-white">
       <div className="w-full pt-6 mx-auto mt-8 flex flex-col justify-center items-center text-center gap-14">
@@ -77,7 +75,7 @@ export const Portfolio = () => {
               <div
                 key={id}
                 className={`${
-                  id % 2 === 0 ? "bg-transparent" : "bg-grey bg-opacity-5"
+                  id % 2 !== 0 ? "bg-transparent" : "bg-grey bg-opacity-5"
                 } flex flex-col md:flex-row gap-4 lg:gap-8 xl:gap-12 2xl:gap-16 p-4 xl:pl-28 py-10 xl:py-10`}
               >
                 <div className="w-full md:w-3/5 h-max flex flex-col gap-2">

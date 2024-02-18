@@ -83,14 +83,9 @@ const Navbar = () => {
           if (subLinks) {
             return (
               <div key={id} className="relative group">
-                <Link
-                  key={index}
-                  href={url}
-                  className="text-gray-primary font-Avenir-Medium text-[18px] hover:text-primary-gold transition duration-300"
-                  onClick={() => setShowMenu(!showMenu)}
-                >
+                <p className="text-gray-primary font-Avenir-Medium text-[18px] hover:text-primary-gold transition duration-300">
                   {text} {subLinks && <IoCaretDownOutline className="inline" />}
-                </Link>
+                </p>
                 {showMenu && subLinks && (
                   <div
                     className="flex flex-col gap-2
@@ -182,16 +177,10 @@ const Navbar = () => {
               if (subLinks) {
                 return (
                   <div key={id} className="relative">
-                    <Link
-                      key={index}
-                      href={url}
-                      prefetch={false}
-                      className="text-white font-avenir text-2xl hover:text-primary-gold transition duration-300"
-                      onClick={() => setShowMenu(!showMenu)}
-                    >
+                    <p className="text-white font-avenir text-2xl hover:text-primary-gold transition duration-300">
                       {text}
                       {subLinks && <IoCaretDownOutline className="inline" />}
-                    </Link>
+                    </p>
 
                     {showMenu && subLinks && (
                       <div
@@ -204,6 +193,7 @@ const Navbar = () => {
                             <Link
                               key={id}
                               href={url}
+                              prefetch={false}
                               className="px-2 py-2 w-max text-gray-primary font-Avenir-Medium text-[18px] hover:text-primary-gold transition duration-300"
                               onClick={() => {
                                 setShow(!show);

@@ -169,6 +169,7 @@ const Navbar = () => {
             <Link
               href="/"
               className="text-white font-avenir text-2xl hover:text-primary-gold transition duration-300"
+              onClick={() => setShow(false)}
             >
               Home
             </Link>

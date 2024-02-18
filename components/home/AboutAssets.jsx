@@ -6,8 +6,8 @@ import { AboutVideo } from "../About-Video";
 const AboutAssets = () => {
   return (
     <div className="w-full min-h-screen py-6 sm:py-12">
-      <div className="w-full md:w-11/12 xl:w-4/5 bg-white py-6 px-8 mx-auto mt-8 flex flex-col justify-center items-center text-center gap-14">
-        <div className="flex flex-col gap-3 px-2 lg:px-16 font-light justify-center items-center text-center">
+      <div className="w-full md:w-11/12 xl:w-4/5 mx-auto bg-white py-6 mt-8 flex flex-col justify-center items-center text-center gap-10 md:gap-14">
+        <div className="px-8 flex flex-col gap-3 lg:px-16 font-light justify-center items-center text-center">
           <h2 className="text-primary-gold text-2xl md:text-[2rem] lg:text-[2.5rem] font-medium sm:leading-[40px] lg:leading-[80px] font-Trajan uppercase">
             About Assets Worldwide
           </h2>

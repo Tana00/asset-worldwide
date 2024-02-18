@@ -5,31 +5,15 @@ import { Pagination } from "../pagination";
 
 const portfolioList = [
   {
-    id: 0,
+    id: 1,
     title: "Luxury Urban Retreat",
     location: "London, UK",
     desc: "In the heart of Manhattan, we transformed a dated penthouse into a sleek and luxurious urban retreat. Modern design elements, smart home integration, and panoramic views of the city skyline make this project a testament to our commitment to innovation and sophistication.",
     before: "/images/proj1-old.svg",
     after: "/images/proj1-new.svg",
-  },
-  {
-    id: 1,
-    title: "Historic Restoration",
-    location: "London, UK",
-    desc: "Preserving the heritage of a historic townhouse in London, we undertook a meticulous restoration project. The result is a harmonious blend of original features and contemporary comforts, showcasing our commitment to honoring the past while embracing the future.",
-    before: "/images/proj2-old.svg",
-    after: "/images/proj2-new.svg",
   },
   {
     id: 2,
-    title: "Luxury Urban Retreat",
-    location: "London, UK",
-    desc: "In the heart of Manhattan, we transformed a dated penthouse into a sleek and luxurious urban retreat. Modern design elements, smart home integration, and panoramic views of the city skyline make this project a testament to our commitment to innovation and sophistication.",
-    before: "/images/proj1-old.svg",
-    after: "/images/proj1-new.svg",
-  },
-  {
-    id: 3,
     title: "Historic Restoration",
     location: "London, UK",
     desc: "Preserving the heritage of a historic townhouse in London, we undertook a meticulous restoration project. The result is a harmonious blend of original features and contemporary comforts, showcasing our commitment to honoring the past while embracing the future.",
@@ -37,7 +21,7 @@ const portfolioList = [
     after: "/images/proj2-new.svg",
   },
   {
-    id: 4,
+    id: 3,
     title: "Luxury Urban Retreat",
     location: "London, UK",
     desc: "In the heart of Manhattan, we transformed a dated penthouse into a sleek and luxurious urban retreat. Modern design elements, smart home integration, and panoramic views of the city skyline make this project a testament to our commitment to innovation and sophistication.",
@@ -45,7 +29,23 @@ const portfolioList = [
     after: "/images/proj1-new.svg",
   },
   {
+    id: 4,
+    title: "Historic Restoration",
+    location: "London, UK",
+    desc: "Preserving the heritage of a historic townhouse in London, we undertook a meticulous restoration project. The result is a harmonious blend of original features and contemporary comforts, showcasing our commitment to honoring the past while embracing the future.",
+    before: "/images/proj2-old.svg",
+    after: "/images/proj2-new.svg",
+  },
+  {
     id: 5,
+    title: "Luxury Urban Retreat",
+    location: "London, UK",
+    desc: "In the heart of Manhattan, we transformed a dated penthouse into a sleek and luxurious urban retreat. Modern design elements, smart home integration, and panoramic views of the city skyline make this project a testament to our commitment to innovation and sophistication.",
+    before: "/images/proj1-old.svg",
+    after: "/images/proj1-new.svg",
+  },
+  {
+    id: 6,
     title: "Historic Restoration",
     location: "London, UK",
     desc: "Preserving the heritage of a historic townhouse in London, we undertook a meticulous restoration project. The result is a harmonious blend of original features and contemporary comforts, showcasing our commitment to honoring the past while embracing the future.",
@@ -66,9 +66,11 @@ export const Portfolio = () => {
     return res;
   }, [pageIndex]);
 
+  console.log(portfolioList?.length);
+
   return (
     <div className="w-full min-h-screen pb-12 bg-white">
-      <div className="w-full py-6 mx-auto mt-8 flex flex-col justify-center items-center text-center gap-14">
+      <div className="w-full pt-6 mx-auto mt-8 flex flex-col justify-center items-center text-center gap-14">
         <div className="flex flex-col gap-8 xl:gap-20 overflow-hidden w-full h-full">
           {currentPagePortfolioList.map(
             ({ id, title, location, desc, before, after }) => (
@@ -131,7 +133,7 @@ export const Portfolio = () => {
             )
           )}
         </div>
-        <div className="flex gap-3 flex-wrap p-6 py-12">
+        <div className="flex gap-3 flex-wrap px-6">
           <Pagination
             className="pagination-bar"
             currentPage={pageIndex}

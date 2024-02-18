@@ -24,14 +24,14 @@ const links = [
       },
       {
         id: 3,
-        url: "/our-team",
+        url: "/about-us#meet-the-team",
         text: "Meet The Team",
       },
     ],
   },
   {
     id: 2,
-    url: "/services",
+    url: "#",
     text: "Services",
   },
   {
@@ -40,13 +40,13 @@ const links = [
     text: "Case Studies",
   },
   {
-    id: 3,
-    url: "/faqs",
+    id: 4,
+    url: "#",
     text: "FAQs",
   },
   {
-    id: 4,
-    url: "/blogs",
+    id: 5,
+    url: "#",
     text: "Blogs",
   },
 ];
@@ -70,7 +70,7 @@ const Navbar = () => {
   }, [show]);
 
   return (
-    <nav className="w-full md:w-4/5 mx-auto flex justify-between items-center px-4 my-6 bg-white font-Avenir">
+    <nav className="w-full md:w-4/5 mx-auto flex justify-between items-center px-4 my-4 md:my-6 bg-white font-Avenir">
       <div className="">
         <Link href="/">
           <Image src={logo} alt="logo" className="" />
@@ -80,41 +80,53 @@ const Navbar = () => {
       <div className="hidden xl:flex items-center justify-center gap-14 mx-8">
         {links.map((link, index) => {
           const { id, url, text, subLinks } = link;
-          return (
-            <div key={id} className="relative group">
-              <Link
-                key={index}
-                href={url}
-                className="text-gray-primary font-Avenir-Medium text-[18px] hover:text-primary-gold transition duration-300"
-                onClick={() => setShowMenu(!showMenu)}
-              >
-                {text} {subLinks && <IoCaretDownOutline className="inline" />}
-              </Link>
-              {showMenu && subLinks && (
-                <div
-                  className="flex flex-col gap-2
-                 absolute top-[30px] left-0 bg-white shadow-lg py-4 px-4 rounded-md z-20 w-[200px]"
+          if (subLinks) {
+            return (
+              <div key={id} className="relative group">
+                <p
+                  onClick={() => setShowMenu(!showMenu)}
+                  className="cursor-pointer text-gray-primary font-Avenir-Medium text-[18px] hover:text-primary-gold transition duration-300"
                 >
-                  {subLinks.map((subLink) => {
-                    const { id, url, text } = subLink;
-                    return (
-                      <Link
-                        key={id}
-                        href={url}
-                        className="px-2 py-2 w-max text-gray-primary font-Avenir-Medium text-[18px] hover:text-primary-gold transition duration-300"
-                        onClick={() => {
-                          setShowMenu(!showMenu);
-                          setShow(false);
-                        }}
-                      >
-                        {text}
-                      </Link>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          );
+                  {text} {subLinks && <IoCaretDownOutline className="inline" />}
+                </p>
+                {showMenu && subLinks && (
+                  <div
+                    className="flex flex-col gap-2
+                 absolute top-[30px] left-0 bg-white shadow-lg py-4 px-4 rounded-md z-20 w-[200px]"
+                  >
+                    {subLinks.map((subLink) => {
+                      const { id, url, text } = subLink;
+                      return (
+                        <Link
+                          key={id}
+                          href={url}
+                          className="px-2 py-2 w-max text-gray-primary font-Avenir-Medium text-[18px] hover:text-primary-gold transition duration-300"
+                          onClick={() => {
+                            setShowMenu(!showMenu);
+                            setShow(false);
+                          }}
+                        >
+                          {text}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            );
+          } else {
+            return (
+              <div key={id} className="relative group">
+                <Link
+                  key={index}
+                  href={url}
+                  className="text-gray-primary font-Avenir-Medium text-[18px] hover:text-primary-gold transition duration-300"
+                >
+                  {text}
+                </Link>
+              </div>
+            );
+          }
         })}
       </div>
 
@@ -160,49 +172,66 @@ const Navbar = () => {
             <Link
               href="/"
               className="text-white font-avenir text-2xl hover:text-primary-gold transition duration-300"
+              onClick={() => setShow(false)}
             >
               Home
             </Link>
             {links.map((link, index) => {
-              const { id, url, text } = link;
-              return (
-                <div key={id} className="relative">
-                  <Link
-                    key={index}
-                    href={url}
-                    prefetch={false}
-                    className="text-white font-avenir text-2xl hover:text-primary-gold transition duration-300"
-                    onClick={() => setShowMenu(!showMenu)}
-                  >
-                    {text}
-                    {link.subLinks && <IoCaretDownOutline className="inline" />}
-                  </Link>
-
-                  {showMenu && link.subLinks && (
-                    <div
-                      className="flex flex-col gap-2
-                       absolute top-[30px] left-0  bg-white shadow-lg py-4 px-4 rounded-md z-20 w-[200px]"
+              const { id, url, text, subLinks } = link;
+              if (subLinks) {
+                return (
+                  <div key={id} className="relative">
+                    <p
+                      onClick={() => setShowMenu(!showMenu)}
+                      className="cursor-pointer text-white font-avenir text-2xl hover:text-primary-gold transition duration-300"
                     >
-                      {link.subLinks.map((subLink) => {
-                        const { id, url, text } = subLink;
-                        return (
-                          <Link
-                            key={id}
-                            href={url}
-                            className="px-2 py-2 w-max text-gray-primary font-Avenir-Medium text-[18px] hover:text-primary-gold transition duration-300"
-                            onClick={() => {
-                              setShow(!show);
-                              setShowMenu(!showMenu);
-                            }}
-                          >
-                            {text}
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
-              );
+                      {text}
+                      {subLinks && <IoCaretDownOutline className="inline" />}
+                    </p>
+
+                    {showMenu && subLinks && (
+                      <div
+                        className="flex flex-col gap-2
+                       absolute top-[30px] left-0  bg-white shadow-lg py-4 px-4 rounded-md z-20 w-[200px]"
+                      >
+                        {subLinks.map((subLink) => {
+                          const { id, url, text } = subLink;
+                          return (
+                            <Link
+                              key={id}
+                              href={url}
+                              prefetch={false}
+                              className="px-2 py-2 w-max text-gray-primary font-Avenir-Medium text-[18px] hover:text-primary-gold transition duration-300"
+                              onClick={() => {
+                                setShow(!show);
+                                setShowMenu(!showMenu);
+                              }}
+                            >
+                              {text}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                );
+              } else {
+                return (
+                  <div key={id} className="relative">
+                    <Link
+                      key={index}
+                      href={url}
+                      prefetch={false}
+                      className="text-white font-avenir text-2xl hover:text-primary-gold transition duration-300"
+                      onClick={() => {
+                        setShow(!show);
+                      }}
+                    >
+                      {text}
+                    </Link>
+                  </div>
+                );
+              }
             })}
             <Link
               href="/book-appointment"

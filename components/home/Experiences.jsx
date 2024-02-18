@@ -97,7 +97,7 @@ const Experiences = () => {
               What our customers say about us.
             </p>
           </div>
-          <div className="mt-10 flex flex-col items-center justify-center w-10/12 mx-auto">
+          <div className="mt-10 flex flex-col items-center justify-center w-11/12 md:w-10/12 mx-auto">
             <div ref={sliderRef} id="keen-slider" className="keen-slider">
               {customersList.map((customer, index) => (
                 <div

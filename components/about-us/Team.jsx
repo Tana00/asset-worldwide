@@ -59,7 +59,7 @@ const teamList = [
 const Team = () => {
   return (
     <FadeIn>
-      <div className="mt-8 lg:pb-20">
+      <div id="meet-the-team" className="mt-8 lg:pb-20">
         <div className="w-full min-h-screen pb-6 md:pt-4 xl:py-12 bg-gold-light">
           <div className="w-full lg:w-4/5 py-6 px-2 md:px-8 mx-auto mt-8 flex flex-col justify-center items-center text-center gap-14">
             <div className="flex flex-col gap-3 px-4 md:px-16 font-light justify-center items-center text-center">

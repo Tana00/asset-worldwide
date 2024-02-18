@@ -28,7 +28,7 @@ const Hero = () => {
               Book Appoinment
             </Link>
           </div>
-          <div className="w-11/12 object-cover h-52 sm:h-auto my-6 min-[1440px]:mt-32 2xl:my-6">
+          <div className="w-full sm:w-11/12 object-cover h-52 sm:h-auto my-6 min-[1440px]:mt-32 2xl:my-6">
             <AboutVideo />
           </div>
         </div>

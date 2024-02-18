@@ -4,7 +4,7 @@ export const Cta = () => {
   return (
     <section className="relative">
       <div className="min-h-max w-full why_us_cta relative z-10">
-        <div className="bg-[#000]/70 backdrop-brightness-50 h-full w-full flex items-center justify-center mx-auto text-center py-6 lg:py-16">
+        <div className="bg-[#000]/60 backdrop-brightness-50 h-full w-full flex items-center justify-center mx-auto text-center py-6 lg:py-16">
           <div className="lg:w-2/3 xl:w-3/5 3xl:w-1/3 flex flex-col items-center justify-center gap-4 w-full py-8 lg:py-10 xl:py-16 px-4 mx-auto text-center">
             <h2 className="text-white text-2xl font-Avenir-Heavy font-semibold md:text-3xl lg:text-[2rem] xl:leading-[55px] xl:text-[2.5rem]">
               Connect With Us

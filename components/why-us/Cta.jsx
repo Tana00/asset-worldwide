@@ -18,7 +18,7 @@ export const Cta = () => {
               </p>
             </div>
             <Link
-              href="/learn-more"
+              href="/contact-us"
               className="flex items-center justify-center bg-primary-gold text-white text-center py-2 px-6 h-12 sm:h-14 rounded-lg w-max font-Avenir-Heavy font-bold text-[15px] sm:text-base lg:text-[18px] hover:bg-primary-green hover:text-white transition duration-300"
             >
               Book Appoinment

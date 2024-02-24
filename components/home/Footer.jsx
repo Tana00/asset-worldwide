@@ -39,10 +39,7 @@ const Footer = () => {
               <Link href="/faqs" className="hover:text-primary-gold">
                 FAQs
               </Link>
-              <Link
-                href="/book-appointment"
-                className="hover:text-primary-gold"
-              >
+              <Link href="/contact-us" className="hover:text-primary-gold">
                 Book Appoinment
               </Link>
             </div>
@@ -50,16 +47,13 @@ const Footer = () => {
               <p className="text-black font-bold text-lg font-Avenir-Heavy">
                 Contact Us
               </p>
-              <Link href="/services" className="hover:text-primary-gold">
+              <Link href="/contact-us" className="hover:text-primary-gold">
                 Book Appointment
               </Link>
-              <Link href="/faqs" className="hover:text-primary-gold">
+              <Link href="" className="hover:text-primary-gold">
                 +44 741 155 9879
               </Link>
-              <Link
-                href="/book-appointment"
-                className="hover:text-primary-gold"
-              >
+              <Link href="" className="hover:text-primary-gold">
                 Jo.costa@assetworldwide.co.uk
               </Link>
               <div className="flex items-center justify-start gap-4">

@@ -22,11 +22,11 @@ export const AboutVideo = () => {
       <a
         href="#"
         onClick={(e) => playVideo(e)}
-        className="block w-full h-[300px] md:rounded-2xl"
+        className="block w-full h-[300px] 2xl:h-[500px] 3xl:h-[600px] md:rounded-2xl"
       >
         <div
           id="video-overlay"
-          className={`absolute top-0 left-0 md:rounded-2xl h-[300px] w-full ${
+          className={`absolute top-0 left-0 md:rounded-2xl h-[300px] 2xl:h-[500px] 3xl:h-[600px] w-full ${
             showOverlay ? "block" : "hidden"
           }`}
         >
@@ -41,7 +41,7 @@ export const AboutVideo = () => {
         </div>
         <video
           muted
-          className="w-full md:h-full md:rounded-2xl h-[300px]"
+          className="w-full md:h-full md:rounded-2xl h-[300px] 2xl:h-[500px] 3xl:h-[600px]"
           // controls
           // autoPlay
           // poster="/images/overlay.svg"

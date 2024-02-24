@@ -59,7 +59,7 @@ const page = () => {
             </p>
 
             <Link
-              href="book-appoinment"
+              href="/contact-us"
               className="sm:mt-3 3xl:mt-8 flex items-center justify-center text-primary-green bg-[#fafafb] text-center xl:py-2 xl:px-4 rounded-lg font-Avenir-heavy font-bold w-fit px-8 py-3.5 sm:text-base xl:w-[210px] xl:h-[56px] xl:text-lg hover:bg-primary-gold hover:text-white transition duration-300"
             >
               Book Appoinment

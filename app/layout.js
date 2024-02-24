@@ -2,6 +2,8 @@
 import { useState } from "react";
 import Navbar from "../components/home/Navbar";
 import Footer from "../components/home/Footer";
+import { ToastContext } from "@/utils/ToastContext";
+import { ErrorToast, Notification } from "@/components/modal";
 import "./globals.css";
 
 const metadata = {
@@ -15,12 +17,29 @@ export default function RootLayout({ children }) {
   const [toastMessage, setToastMessage] = useState("");
 
   return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        <div className="">{children}</div>
-        <Footer />
-      </body>
-    </html>
+    <ToastContext.Provider
+      value={{ showToast, setShowToast, toastMessage, setToastMessage }}
+    >
+      <html lang="en">
+        <body>
+          {showToast === "error" && (
+            <ErrorToast
+              closeToast={() => setShowToast(false)}
+              message={toastMessage}
+            />
+          )}
+          {showToast === "success" && (
+            <Notification
+              title={toastMessage.title}
+              message={toastMessage.message}
+              closeModal={() => setShowToast(null)}
+            />
+          )}
+          <Navbar />
+          <div className="">{children}</div>
+          <Footer />
+        </body>
+      </html>
+    </ToastContext.Provider>
   );
 }

@@ -25,7 +25,7 @@ export const Hero = () => {
             </p>
 
             <Link
-              href="book-appoinment"
+              href="/contact-us"
               className="mt-6 mx-auto flex items-center justify-center bg-primary-green text-[#fafafb] text-center xl:py-2 xl:px-4 rounded-lg font-Avenir-heavy font-bold w-fit px-8 py-3.5 sm:text-base xl:w-[210px] xl:h-[56px] xl:text-lg hover:bg-primary-gold hover:text-white transition duration-300"
             >
               Book Appoinment

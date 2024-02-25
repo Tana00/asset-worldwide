@@ -3,7 +3,7 @@ import FadeIn from "../FadeIn";
 
 export const Hero = () => {
   return (
-    <FadeIn classname="lg:!pb-28">
+    <FadeIn classname="lg:!pb-2">
       <div className="relative w-full mt-6 text-center">
         <div className="relative w-full h-auto flex items-center justify-start flex-col lg:w-11/12 md:rounded-2xl py-6 lg:p-20 mx-auto">
           <div className="py-6 md:pt-10 flex flex-col sm:w-full mx-4 sm:mx-8 xl:mx-0 3xl:w-3/5 gap-3 xl:gap-4">

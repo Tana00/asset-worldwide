@@ -37,32 +37,45 @@ const servicesList = [
 
 export const Services = () => {
   return (
-    <section className="lg:w-10/12 mx-auto my-10 space-y-16">
+    <section className="w-full md:w-11/12 lg:w-10/12 mx-auto mb-10 space-y-16">
       {servicesList?.map(({ id, title, subTitle, desc, colors, image }) => (
         <div
           key={id}
-          className="relative lg:rounded-2xl w-full px-4 py-8 lg:p-8 flex flex-col items-center justify-center gap-3 md:gap-4 text-center"
-          style={{
-            background: `linear-gradient(180deg, ${colors[0]} 0%, ${colors[1]} 100%)`,
-          }}
+          className="h-full sm:h-[740px] md:h-[804px] w-full overflow-hidden"
         >
-          <p className="text-primary-green text-2xl leading-10 md:text-3xl lg:leading-[54.64px] font-Avenir-Black font-bold">
-            {title}
-          </p>
-          <p className="text-black text-xl font-Avenir-Heavy font-semibold">
-            {subTitle}
-          </p>
-          <p className="text-sm leading-7 lg:text-base text-grey lg:leading-8 font-Avenir-Medium font-medium w-full md:w-10/12 lg:w-4/5 mx-auto lg:px-10">
-            {desc}
-          </p>
-          <div className="absolute top-72 w-full md:w-10/12 lg:w-4/5 mx-auto mt-10 rounded-lg">
-            <Image
-              src={image}
-              alt={title}
-              width={100}
-              height={100}
-              className="w-full rounded-lg"
-            />
+          <div
+            className="relative lg:rounded-2xl h-[590px] w-full pt-4 sm:px-4 sm:py-8 lg:p-8 flex flex-col items-start sm:items-center gap-3 lg:gap-4 sm:text-center"
+            style={{
+              background: `linear-gradient(180deg, ${colors[0]} 0%, ${colors[1]} 100%)`,
+            }}
+          >
+            <p className="text-primary-green text-2xl leading-5 sm:leading-10 md:text-[28px] lg:text-3xl lg:leading-[54.64px] font-Avenir-Black font-bold px-4">
+              {title}
+            </p>
+            <p className="text-black text-xl font-Avenir-Heavy font-semibold px-4">
+              {subTitle}
+            </p>
+            <p className="text-[13px] sm:text-sm leading-6 sm:leading-7 lg:text-base text-grey lg:leading-8 font-Avenir-Medium font-medium w-full xl:w-4/5 mx-auto px-4 lg:px-10">
+              {desc}
+            </p>
+            <div
+              className="w-full sm:w-11/12 md:w-10/12 lg:w-4/5 mx-auto mt-10 sm:rounded-lg service_image bg-no-repeat"
+              style={{
+                backgroundImage: `url(${image})`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+            >
+              {/* <Image
+                src={image}
+                alt={title}
+                width={100}
+                height={100}
+                // layout="fill"
+                className="w-full h-full rounded-lg object-cover"
+              /> */}
+            </div>
           </div>
         </div>
       ))}

@@ -96,11 +96,6 @@ body {
     linear-gradient(180deg, #f0fff7 0%, #d2fffa 100%);
 }
 
-/* .vision {
-  max-height: 738px;
-  height: 100%;
-  background: linear-gradient(180deg, #f0fff7 0%, #d2fffa 100%);
-} */
 @media (min-width: 2000px) {
   .vision,
   .mission {
@@ -184,4 +179,20 @@ video {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+.blog p {
+  margin: 1.2rem 0;
+  line-height: 32px;
+}
+.blog ol {
+  margin: 1.2rem 0;
+  line-height: 40px;
+}
+.blog li {
+  margin: 1.2rem 0;
+}
+.blog strong {
+  display: block;
+  font-weight: bold;
+  font-family: "Avenir Black";
 }

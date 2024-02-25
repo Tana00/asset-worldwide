@@ -34,7 +34,7 @@ export const News = () => {
                 live. Stay inspired with insights from our design experts.
               </p>
               <Link
-                href="/blogs"
+                href="/blogs/future-of-home-design"
                 className="mt-4 flex items-center justify-center text-primary-green bg-green-light  text-center xl:py-2 xl:px-4  rounded-[100px]  font-Avenir-heavy font-medium w-fit px-8 py-3.5 sm:text-base xl:w-[210px] xl:h-[56px] xl:text-lg hover:bg-primary-green hover:text-white transition duration-300"
               >
                 Read More
@@ -70,8 +70,8 @@ export const News = () => {
                 </p>
 
                 <Link
-                  href="/blogs"
-                  className=" flex items-center justify-center text-primary-green bg-green-light  text-center xl:py-2 xl:px-4  rounded-[100px]  font-Avenir-heavy font-medium w-fit px-8 py-3.5 sm:text-base xl:w-[210px] xl:h-[56px] xl:text-lg hover:bg-primary-green hover:text-white transition duration-300"
+                  href="/blogs/future-of-home-design"
+                  className=" flex items-center justify-center text-primary-green bg-green-light text-center xl:py-2 xl:px-4 rounded-[100px] font-Avenir-heavy font-medium w-fit px-8 py-3.5 sm:text-base xl:w-[210px] xl:h-[56px] xl:text-lg hover:bg-primary-green hover:text-white transition duration-300"
                 >
                   Read More
                   <svg
@@ -105,7 +105,7 @@ export const News = () => {
                 </p>
 
                 <Link
-                  href="/blogs"
+                  href="/blogs/future-of-home-design"
                   className="mt-4 flex items-center justify-center text-primary-green bg-green-light  text-center xl:py-2 xl:px-4  rounded-[100px]  font-Avenir-heavy font-medium w-fit px-8 py-3.5 sm:text-base xl:w-[210px] xl:h-[56px] xl:text-lg hover:bg-primary-green hover:text-white transition duration-300"
                 >
                   Read More
@@ -157,8 +157,8 @@ export const News = () => {
                 live. Stay inspired with insights from our design experts.
               </p>
               <Link
-                href="/blogs"
-                className="mt-4 flex items-center justify-center text-primary-green bg-green-light  text-center xl:py-2 xl:px-4  rounded-[100px]  font-Avenir-heavy font-medium w-fit px-8 py-3.5 sm:text-base xl:w-[210px] xl:h-[56px] xl:text-lg hover:bg-primary-green hover:text-white transition duration-300"
+                href="/blogs/future-of-home-design"
+                className="mt-4 flex items-center justify-center text-primary-green bg-green-light text-center xl:py-2 xl:px-4  rounded-[100px]  font-Avenir-heavy font-medium w-fit px-8 py-3.5 sm:text-base xl:w-[210px] xl:h-[56px] xl:text-lg hover:bg-primary-green hover:text-white transition duration-300"
               >
                 Read More
                 <svg
@@ -198,7 +198,7 @@ export const News = () => {
                 your living spaces into enduring masterpieces.
               </p>
               <Link
-                href="/blogs"
+                href="/blogs/future-of-home-design"
                 className="mt-4 flex items-center justify-center text-primary-green bg-green-light  text-center xl:py-2 xl:px-4  rounded-[100px]  font-Avenir-heavy font-medium w-fit px-8 py-3.5 sm:text-base xl:w-[210px] xl:h-[56px] xl:text-lg hover:bg-primary-green hover:text-white transition duration-300"
               >
                 Read More

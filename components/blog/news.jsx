@@ -1,7 +1,12 @@
+"use client";
+
+import { useAxios } from "@/requests";
 import Image from "next/image";
 import Link from "next/link";
 
 export const News = () => {
+  const { data, loading } = useAxios("/blogs");
+
   return (
     <div className="w-full md:w-4/5 lg:w-11/12 xl:w-4/5 mx-auto mt-8 md:mt-16 px-4 sm:px-8 md:px-4 h-full flex flex-col">
       <div className="h-full flex flex-col">

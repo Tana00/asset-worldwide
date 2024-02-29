@@ -1,3 +1,5 @@
+"use client";
+
 import { Hero, SingleBlogComponent } from "@/components/blog/[id]";
 import { Cta } from "@/components/why-us";
 

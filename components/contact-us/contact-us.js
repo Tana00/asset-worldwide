@@ -92,35 +92,33 @@ export const ContactUsForm = () => {
           "Email Address": data?.email,
           Message: data?.message,
         };
-        // const res = await fetch("/api/contact", {
-        //   body: JSON.stringify({
-        //     email: data?.email,
-        //     subject: `Enquiry`,
-        //     body: bodyData,
-        // files: attachment,
-        //     data,
-        //   }),
-        //   headers: {
-        //     "Content-Type": "application/json",
-        //   },
-        //   method: "POST",
-        // });
+        const res = await fetch("/api/contact", {
+          body: JSON.stringify({
+            fullName: data?.fullName,
+            email: data?.email,
+            subject: data?.subject,
+            message: data?.message,
+            file: attachment,
+            fileName: data?.fileName,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+        });
 
-        // const result = await res.json();
+        const result = await res.json();
 
-        // if (result.status === 202) {
-        //   setToastMessage({
-        //     title: "Message sent",
-        //     message: "Your message has been sent successfully.",
-        //   });
-        //   setShowToast("success");
-        //   setData(defaultState);
-        //   return setButtonText("Send");
-        // } else {
-        //   setToastMessage("Message was not sent else. Please try again");
-        //   setShowToast("error");
-        //   return setButtonText("Send");
-        // }
+        if (result.status === 202) {
+          setToastMessage("Your message has been sent successfully.");
+          setShowToast("success");
+          setData(defaultState);
+          return setButtonText("Send");
+        } else {
+          setToastMessage("Message was not sent else. Please try again");
+          setShowToast("error");
+          return setButtonText("Send");
+        }
       }
     } catch (err) {
       setToastMessage("Message not sent. Please try again");
@@ -159,14 +157,14 @@ export const ContactUsForm = () => {
         <CustomInput
           value={data.subject}
           onChange={(e) => {
-            const regex = /^[A-Za-z]*$/;
+            // const regex = /^[A-Za-z]*$/;
 
-            if (regex.test(e.target.value)) {
-              handleDataChange(e.target.value, "subject");
-            } else if (e.target.value === "") {
-              // Handle the case where the input is empty
-              handleDataChange("", "subject");
-            }
+            // if (regex.test(e.target.value)) {
+            handleDataChange(e.target.value, "subject");
+            // } else if (e.target.value === "") {
+
+            //   handleDataChange("", "subject");
+            // }
           }}
           name="subject"
           label="Subject"
@@ -175,14 +173,14 @@ export const ContactUsForm = () => {
         <CustomInput
           value={data.fullName}
           onChange={(e) => {
-            const regex = /^[A-Za-z]*$/; // Allow an empty string or alphabets
+            // const regex = /^[A-Za-z]*$/; // Allow an empty string or alphabets
 
-            if (regex.test(e.target.value)) {
-              handleDataChange(e.target.value, "fullName");
-            } else if (e.target.value === "") {
-              // Handle the case where the input is empty
-              handleDataChange("", "fullName");
-            }
+            // if (regex.test(e.target.value)) {
+            handleDataChange(e.target.value, "fullName");
+            // } else if (e.target.value === "") {
+            //   // Handle the case where the input is empty
+            //   handleDataChange("", "fullName");
+            // }
           }}
           name="full_name"
           label="Full Name"
@@ -199,7 +197,11 @@ export const ContactUsForm = () => {
         <CustomUploadButton
           name="file"
           file={data.file}
-          handleFileChange={(e) => handleFileChange(e, "file")}
+          handleFileChange={(e) =>
+            e === null
+              ? handleDataChange("", "file")
+              : handleFileChange(e, "file")
+          }
           error={missingFields?.includes("file")}
         />
         <div className="w-full flex items-start justify-start flex-col">

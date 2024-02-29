@@ -4,20 +4,22 @@ import sendgrid from "@sendgrid/mail";
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function POST(request) {
-  const { body, subject, email, data } = await request.json();
+  const { fullName, subject, email, message, fileName, file } =
+    await request.json();
 
   const res = await sendgrid.send({
-    to: "info@delorecare.com",
-    from: data.email,
+    // to: "Jo.costa@assetworldwide.co.uk",
+    to: email,
+    from: "lukmanagbogun@outlook.com",
     subject: `${subject}`,
     html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html lang="en">
       <head>
         <meta charset="utf-8" />
     
-        <title>Delore Care</title>
-        <meta name="description" content="Delore Care Contact Us" />
-        <meta name="author" content="Delore Care" />
+        <title>Asset WorldWide</title>
+        <meta name="description" content="Asset WorldWide Contact Us" />
+        <meta name="author" content="Asset WorldWide" />
         <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
       </head>
     
@@ -47,27 +49,11 @@ export async function POST(request) {
                 >
                   <tbody style="margin-left: 20px; margin-right: 20px">
                     <h3>
-                      You've got a new mail from ${
-                        data.fullName
-                      }, their email is: ✉️${data.email}
+                      You've got a new mail from ${fullName}, their email is: ✉️${email}
                     </h3>
                     <div style="font-size: 18px">
-                      <table style="border: 1px solid #12355b; padding: 1rem">
-                        <tr style="border: 1px solid #12355b">
-                          <th style="text-align: left;border-bottom: 1px solid #12355b;padding:1rem">Field</th>
-                          <th style="text-align: left;border-bottom: 1px solid #12355b;padding:1rem">Value</th>
-                        </tr>
-                        ${Object.entries(body)
-                          .map(
-                            ([key, value]) => `
-                        <tr style="border: 1px solid #12355b">
-                          <td style="border-bottom: 1px solid #12355b;padding:1rem">${key}</td>
-                          <td style="border-bottom: 1px solid #12355b;padding:1rem">${value}</td>
-                        </tr>
-                        `
-                          )
-                          .join("")}
-                      </table>
+                    <h4>Message</h4>
+                   <p>${message}</p>
                     </div>
                   </tbody>
                 </table>
@@ -77,6 +63,14 @@ export async function POST(request) {
         </table>
       </body>
     </html>`,
+    attachments: [
+      {
+        content: file?.toString("base64") || "",
+        filename: fileName,
+        type: "application/*",
+        disposition: "attachment",
+      },
+    ],
   });
 
   return NextResponse.json({ message: "success", status: res[0].statusCode });

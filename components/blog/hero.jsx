@@ -1,4 +1,4 @@
-export const Hero = () => {
+export const BlogHero = () => {
   return (
     <div className="w-full h-[40vh] md:h-[60vh] blog-image flex flex-col justify-center p-8">
       <div className="w-4/5 mx-auto">

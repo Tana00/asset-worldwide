@@ -1,3 +1,5 @@
+"use client";
+
 import { Hero, News } from "@/components/blog";
 import { Cta } from "@/components/why-us";
 

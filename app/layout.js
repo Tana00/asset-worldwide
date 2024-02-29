@@ -3,7 +3,7 @@ import { useState } from "react";
 import Navbar from "../components/home/Navbar";
 import Footer from "../components/home/Footer";
 import { ToastContext } from "@/utils/ToastContext";
-import { ErrorToast, Notification } from "@/components/modal";
+import { Toast } from "@/components/modal";
 import "./globals.css";
 
 const metadata = {
@@ -22,17 +22,11 @@ export default function RootLayout({ children }) {
     >
       <html lang="en">
         <body>
-          {showToast === "error" && (
-            <ErrorToast
+          {(showToast === "error" || showToast === "success") && (
+            <Toast
               closeToast={() => setShowToast(false)}
               message={toastMessage}
-            />
-          )}
-          {showToast === "success" && (
-            <Notification
-              title={toastMessage.title}
-              message={toastMessage.message}
-              closeModal={() => setShowToast(null)}
+              type={showToast}
             />
           )}
           <Navbar />

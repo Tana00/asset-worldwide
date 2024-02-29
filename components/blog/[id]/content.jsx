@@ -1,4 +1,8 @@
+import { useAxios } from "@/requests";
+
 export const SingleBlogComponent = () => {
+  const { data, loading } = useAxios("/blogs/1");
+
   return (
     <section className="w-10/12 md:w-4/5 mx-auto mb-20 blog">
       <div className="leading-8 font-medium font-Avenir-Medium">

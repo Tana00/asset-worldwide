@@ -24,11 +24,14 @@ const data = [
 export const CTA = () => {
   return (
     <div className="bg-green-light w-full h-full flex flex-col justify-center py-16 px-10 xl:py-28 lg:mt-10 mx-auto">
-      <div className="w-full lg:w-4/5 2xl:w-3/5 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-evenly text-center gap-y-10 gap-4 lg:gap-10">
-        {data?.map((item) => (
+      <div className="w-full lg:w-4/5 2xl:w-3/5 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-start gap-y-10">
+        {data?.map((item, i) => (
+          // <div  className="flex">
           <div
             key={item?.id}
-            className={`flex flex-col items-start gap-4 text-black w-fit`}
+            className={`flex flex-col items-start gap-4 text-black w-full ${
+              item.id === 4 ? "" : "border-r"
+            }`}
           >
             <Image
               src={item.icon}

@@ -15,10 +15,10 @@ const Hero = () => {
             <span className="text-[#006633]"> Dream Homes</span>
           </h2>
           <p className="text-black text-sm xs:text-base !leading-6 md:!leading-7 md:text-lg lg:!leading-8 font-light sm:-mt-2 md:-mt-0 w-full xs:w-11/12 sm:w-2/3 md:w-3/4 xl:w-3/5 font-Avenir-Medium">
-            Explore our transformative services and embark on a journey to
-            redefine your living spaces. We specialize in turning houses into
-            dream homes, ensuring that every space reflects your lifestyle,
-            personality, and unique taste.
+            At Asset Worldwide Ltd, we&apos;re on a mission to transform
+            distressed properties into vibrant havens for both community and
+            Landlords. Partner with us to breathe new life into neglected spaces
+            and revitalize the neighborhoods.
           </p>
 
           <Link

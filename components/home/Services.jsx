@@ -11,28 +11,28 @@ const serviceList = [
     id: 1,
     title: "Empty House",
     description:
-      "Is your property standing empty, waiting for a purpose? Asset Worldwide specializes in transforming vacant houses into vibrant, welcoming homes.",
+      "At Asset Worldwide Ltd, we specialize in revitalizing distressed properties by partnering with landlords of empty homes and local councils.",
     img: img1,
   },
   {
     id: 2,
     title: "Guaranteed Rent Scheme",
     description:
-      "Asset Worldwide Real Estate offers a Guaranteed Rent Scheme designed to provide property owners with a reliable income stream.",
+      "At Asset Worldwide, we offer a comprehensive suite of services to meet all your property needs. In addition to our expertise in revitalizing empty homes...",
     img: img2,
   },
   {
     id: 3,
     title: "Property Management",
     description:
-      "Our Property Management services are tailored to meet the diverse needs of property owners. From regular maintenance and tenant communication to financial reporting and legal compliance.",
+      "Are you a property owner looking to streamline operations, enhance value, and ensure the smooth running of your real estate investments? Welcome to Asset Worldwide's...",
     img: img3,
   },
   {
     id: 4,
     title: "Lease Option",
     description:
-      "The Lease Option, providing flexibility and convenience in property transactions. This allows potential buyers to lease a property with the option to purchase it at a later date.",
+      "Unlock the potential of your property investment with Asset Worldwide's Lease Option service. Whether you're a landlord seeking to secure a steady income stream...",
     img: img4,
   },
 ];
@@ -75,7 +75,9 @@ const Services = () => {
                   </p>
                 </div>
                 <Link
-                  href="/learn-more"
+                  href={`/services#${service?.title
+                    ?.replaceAll(" ", "_")
+                    ?.toLowerCase()}`}
                   className="flex items-center justify-center bg-primary-gold text-[#fafafb] text-center xl:px-4 rounded-lg font-Avenir-Regular font-bold text-sm w-fit px-6 py-3 xl:w-[147px] xl:h-12 xl:text-[16px] hover:bg-primary-gold hover:text-white transition duration-300"
                 >
                   Learn More

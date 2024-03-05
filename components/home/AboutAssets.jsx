@@ -12,13 +12,16 @@ const AboutAssets = () => {
             About Assets Worldwide
           </h2>
           <p className="text-black text-sm !leading-6 md:text-lg md:!leading-8 font-medium w-full 2xl:w-3/5 font-Avenir-Regular">
-            Asset Worldwide, a prominent real estate entity based in the United
-            Kingdom, boasts a rich operational history spanning over five years.
-            We redefine the concept of home by seamlessly merging real estate
-            expertise with transformative design and innovation. We understand
-            that a house is more than just a property; it&apos;s a canvas
-            waiting to be transformed into a masterpiece that reflects your
-            unique lifestyle.
+            At Asset Worldwide, we offer a comprehensive suite of services to
+            meet all your property needs. In addition to our expertise in
+            revitalizing empty homes, we provide Lease Option and Rent to Rent
+            solutions, offering landlords guaranteed rent while we secure
+            tenants under fixed contract terms. Our meticulous property
+            management services ensure smooth operations and maintenance,
+            optimizing the value and potential of every property in our care.
+            With a dedication to innovation and client satisfaction, Asset
+            Worldwide is your ultimate partner for seamless property
+            transformation and management.
           </p>
           <Link
             href="/learn-more"

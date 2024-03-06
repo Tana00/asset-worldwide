@@ -270,6 +270,10 @@ video {
   margin-bottom: 1rem;
   color: #333;
 }
+.blog ol {
+  list-style: decimal;
+  margin-left: 1.2rem;
+}
 
 .service_image {
   position: absolute;

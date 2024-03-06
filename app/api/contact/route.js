@@ -72,6 +72,6 @@ export async function POST(request) {
       },
     ],
   });
-
+  console.log("response", NextResponse);
   return NextResponse.json({ message: "success", status: res[0].statusCode });
 }

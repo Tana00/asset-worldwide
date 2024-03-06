@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import ArrowDown from "../public/assets/icons/arrow-down.svg";
@@ -9,7 +9,6 @@ import ArrowDownGreen from "../public/assets/icons/arrow-down-green.svg";
 import { menuList } from "@/utils";
 
 const Nav = () => {
-  const router = useRouter;
   const pathname = usePathname();
 
   const navbarRef = useRef(null);

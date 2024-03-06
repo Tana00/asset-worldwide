@@ -15,10 +15,10 @@ const MissionAndVision = () => {
                   Our Mission
                 </p>
                 <p className="text-black text-sm leading-6 md:text-[15px] lg:text-base font-medium md:!leading-7 lg:!leading-8 2xl:px-10 4xl:w-4/5">
-                  We strive to be at the forefront of design trends,
-                  technological advancements, and client-centric practices,
-                  continuously innovating to meet the evolving needs of our
-                  clients on a global scale.
+                  Catalyzing community renewal through the transformation of
+                  abandoned properties, our mission at Asset Worldwide is to
+                  revitalize neighborhoods by providing bespoke solutions for
+                  distressed and empty homes through innovative lease options.
                 </p>
               </div>
             </div>
@@ -26,13 +26,12 @@ const MissionAndVision = () => {
               <div className="flex flex-col items-center justify-center gap-2 md:gap-4 xl:gap-6 p-6 md:px-4 xl:px-10 sm:pt-4 md:pt-8 xl:pt-16">
                 <Image src={Diamond} alt="mission" className="w-10 h-10" />
                 <p className="text-primary-green font-Avenir-Heavy font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-[40px]">
-                  Our Values
+                  Our Vision
                 </p>
                 <p className="text-black text-sm leading-6 md:text-[15px] lg:text-base font-medium md:!leading-7 lg:!leading-8 2xl:px-10 4xl:w-4/5">
-                  We strive to be at the forefront of design trends,
-                  technological advancements, and client-centric practices,
-                  continuously innovating to meet the evolving needs of our
-                  clients on a global scale.
+                  Our vision is to become the leading force in property
+                  revitalization, recognized for our innovative lease option
+                  solutions and commitment to community development
                 </p>
               </div>
             </div>

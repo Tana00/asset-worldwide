@@ -196,6 +196,80 @@ video {
   font-weight: bold;
   font-family: "Avenir Black";
 }
+.blog .inline-text {
+  display: inline !important;
+}
+.blog h3 {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Avenir Heavy";
+  margin: 2rem 0;
+}
+.blog h2 {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Avenir Heavy";
+  margin: 2rem 0;
+}
+.blog div {
+  margin: 2rem 0;
+}
+.blog div p {
+  margin: 0.8rem 0;
+}
+.blog table,
+.blog table th,
+.blog table td {
+  border: 1px solid black;
+  text-align: left;
+  padding: 0.5rem 1rem;
+}
+.blog table th {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Avenir Heavy";
+}
+.blog .table-wrapper {
+  width: 100%;
+  overflow: scroll;
+}
+.blog table {
+  width: 100%;
+  font-size: 0.9rem;
+  line-height: normal;
+  color: #333;
+}
+@media (max-width: 768px) {
+  .blog div {
+    margin: 1rem 0;
+  }
+  .blog .table-wrapper table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .blog h2 {
+    font-size: 22px;
+  }
+}
+.blog table p {
+  margin: 0.5rem 0;
+  line-height: normal;
+}
+.blog table .text-medium {
+  font-weight: 700;
+  font-family: "Avenir Heavy";
+}
+.blog table .inline-text {
+  text-decoration: underline;
+  font-weight: 700;
+  font-family: "Avenir Heavy";
+}
+.blog .table-caption {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
 
 .service_image {
   position: absolute;

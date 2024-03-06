@@ -26,11 +26,12 @@ export const CTA = () => {
     <div className="bg-green-light w-full h-full flex flex-col justify-center py-16 px-10 xl:py-28 lg:mt-10 mx-auto">
       <div className="w-full lg:w-4/5 2xl:w-3/5 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-start gap-y-10">
         {data?.map((item, i) => (
-          // <div  className="flex">
           <div
             key={item?.id}
-            className={`flex flex-col items-start gap-4 text-black w-full ${
-              item.id === 4 ? "" : "border-r"
+            className={`flex flex-col items-start gap-4 text-black w-fit ${
+              item.id === 3
+                ? ""
+                : "md:border-r border-grey border-opacity-20 md:pr-14 lg:pr-20 xl:pr-36"
             }`}
           >
             <Image

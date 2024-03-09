@@ -93,7 +93,7 @@ const Works = () => {
 
         <div className="w-full md:w-3/4 xl:w-4/5 2xl:w-1/2 bg-gold-light px-5 md:px-8 py-4 flex justify-center items-center rounded-md">
           <Link
-            href="/works"
+            href="/case-studies"
             className="w-full bg-primary-green text-white text-sm md:text-[1.125rem] py-2 px-4 rounded-md font-Avenir-Black text-center hover:bg-primary-green-dark transition-all duration-300 ease-in-out"
           >
             See More transformative projects

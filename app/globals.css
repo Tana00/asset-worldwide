@@ -168,7 +168,7 @@ video {
   background-position: center center;
 }
 .single-blog-image {
-  background: url("/images/blog-hero.svg");
+  /* background: url("/images/blog-hero.svg"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

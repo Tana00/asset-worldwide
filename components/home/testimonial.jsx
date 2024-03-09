@@ -60,8 +60,6 @@ const TestimonialSlider = () => {
   const isPrevDisabled = startIndex === 0;
   const isNextDisabled = endIndex >= testimonials.length;
 
-  console.log(startIndex, endIndex);
-
   return (
     <div>
       <div className="w-full min-h-screen sm:py-12 bg-green-light">

@@ -10,8 +10,11 @@ export const News = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 2;
 
-  const totalPages = Math.ceil(latestNews.length / itemsPerPage);
-  const paginatedNews = latestNews.slice(
+  const slicedNews = latestNews.slice(3);
+
+  const totalPages = Math.ceil(slicedNews.length / itemsPerPage);
+
+  const paginatedNews = slicedNews.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
@@ -19,6 +22,8 @@ export const News = () => {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+
+  console.log(paginatedNews, slicedNews)
 
   return (
     <div className="w-full md:w-4/5 lg:w-11/12 xl:w-4/5 mx-auto mt-8 md:mt-16 px-4 sm:px-8 md:px-4 h-full flex flex-col">
@@ -165,12 +170,15 @@ export const News = () => {
 
       <div className="h-full flex flex-col my-32">
         <p className="text-black text-[1.125rem] md:text-[2.5rem] font-Avenir-Black ">
-          Latest News
+          More News
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 gap-y-8 mt-6">
           {paginatedNews?.map(({ id, img, title, content, link }) => (
+            // if(id > 2) {
+            //   console.log(title, id)
+            //   return (
             <div key={id} className="w-full h-auto flex-1 flex flex-col gap-8">
-              <div className="w-full h-full xl:h-[400px] relative rounded-2xl">
+              <div className="w-full h-full lg:h-[400px] relative rounded-2xl">
                 <Image
                   src={img}
                   alt="blog"
@@ -182,17 +190,17 @@ export const News = () => {
               <div className="w-full h-auto flex flex-col gap-2 lg:gap-3">
                 <p className="text-[#000000] text-base md:text-lg lg:text-xl xl:text-[1.5rem] leading-[40px] font-black font-Avenir-Black">
                   <span>{title?.split(":")?.[0]}</span>
-                  {title?.split(":")?.[1] && (
+                  {title?.split(":")?.[1] ? (
                     <span className="block -mt-2 md:mt-2">
                       {title?.split(":")?.[1]}
                     </span>
-                  )}
+                  ) :  <span className="block -mt-2 md:mt-2"></span>}
                 </p>
                 <p className="text-[#000] text-sm md:text-[1.125rem] leading-[32px] font-Avenir-Regular line-clamp-3">
                   {content}
                 </p>
                 <Link
-                  href={link}
+                  href={link && link}
                   className="mt-4 flex items-center justify-center text-primary-green bg-green-light text-center xl:py-2 xl:px-4  rounded-[100px]  font-Avenir-heavy font-medium w-fit px-8 py-3.5 sm:text-base xl:w-[210px] xl:h-[56px] xl:text-lg hover:bg-primary-green hover:text-white transition duration-300"
                 >
                   Read More
@@ -211,7 +219,8 @@ export const News = () => {
                 </Link>
               </div>
             </div>
-          ))}
+              // )}
+                  ))}
         </div>
         <div className="flex justify-center mt-8">
           {Array.from({ length: totalPages }, (_, index) => (

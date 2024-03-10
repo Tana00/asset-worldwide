@@ -188,7 +188,7 @@ video {
   margin: 1.2rem 0;
   line-height: 40px;
 }
-.blog li {
+.blog ol li {
   margin: 1.2rem 0;
 }
 .blog strong {
@@ -273,6 +273,13 @@ video {
 .blog ol {
   list-style: decimal;
   margin-left: 1.2rem;
+}
+.blog ul {
+  list-style: disc;
+  margin-left: 1.4rem;
+}
+.blog ul li {
+  margin: .5rem 0;
 }
 
 .service_image {

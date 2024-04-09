@@ -35,7 +35,7 @@ export const customersList = [
   {
     id: 4,
     name: "David K",
-    title: "Property Owner",
+    title: "Happy Tenant",
     img: img2,
     text: "We've been renting with Asset Worldwide Ltd for a while now, and we couldn't be happier with their service. From the moment we moved in, they've been incredibly responsive to any concerns or maintenance issues we've had. Their professionalism and efficiency make renting with them a breeze. We highly recommend their service to anyone in search of a reliable and tenant-friendly property management company.",
   },

@@ -12,9 +12,9 @@ export const customersList = [
   {
     id: 1,
     name: "Emily and James T",
-    title: "Satisfied Homeowners",
+    title: "Satisfied Homeowner",
     img: img1,
-    text: "Asset Worldwide turned our empty property into a stunning, market-ready home. The transformation was beyond our expectations. Their attention to detail and commitment to delivering on time truly sets them apart. We couldn't be happier with the result!",
+    text: "I had the pleasure of working with Asset Worldwide Ltd to bring back an empty home in my neighborhood, and I couldn't be more pleased with the results. From start to finish, they demonstrated a keen eye for design, a commitment to quality craftsmanship, and a genuine passion for transforming neglected properties into vibrant living spaces. Their team's expertise and professionalism made the entire process seamless and enjoyable. Thank you for making our community a better place to live!!!",
   },
 
   {
@@ -22,14 +22,14 @@ export const customersList = [
     name: "David K",
     title: "Property Owner",
     img: img2,
-    text: "Asset Worldwide's Property Management team has been exceptional. They handle everything with professionalism and efficiency, from tenant communication to regular maintenance. It's a relief to know our property is in capable hands, allowing us to focus on other aspects of our investment portfolio.",
+    text: "For years, I've entrusted to Asset Worldwide Ltd my rental properties, and they consistently exceed my expectations. Their attention to detail in tenant selection and swift response to maintenance issues are truly remarkable. I confidently recommend them to any property owner seeking reliable management services.",
   },
   {
     id: 3,
     name: "Jennifer R.",
-    title: "Satisfied Buyer",
+    title: "Property Homeowner",
     img: img3,
-    text: "The Lease Option offered by Asset Worldwide Real Estate provided us with the flexibility we needed in our property transaction. It allowed us to explore the property before committing to a purchase, giving us peace of mind. A forward-thinking approach to real estate transactions!",
+    text: "I cannot express enough gratitude for the Lease Option presented by Asset Worldwide Real Estate for my vacant property. Initially feeling overwhelmed by the state of my home, their solution offered a lifeline. The Lease Option allowed me to witness the transformation of my once-distressed property into a welcoming home again, all while retaining the flexibility to make a decision that suited my needs. Asset Worldwide Real Estate's forward-thinking approach not only brought life back to my home but also brought peace to my mind. I couldn't be happier with the outcome!",
   },
 
   {
@@ -37,21 +37,7 @@ export const customersList = [
     name: "David K",
     title: "Property Owner",
     img: img2,
-    text: "Asset Worldwide's Property Management team has been exceptional. They handle everything with professionalism and efficiency, from tenant communication to regular maintenance. It's a relief to know our property is in capable hands, allowing us to focus on other aspects of our investment portfolio.",
-  },
-  {
-    id: 5,
-    name: "Jennifer R.",
-    title: "Satisfied Buyer",
-    img: img3,
-    text: "The Lease Option offered by Asset Worldwide Real Estate provided us with the flexibility we needed in our property transaction. It allowed us to explore the property before committing to a purchase, giving us peace of mind. A forward-thinking approach to real estate transactions!",
-  },
-  {
-    id: 6,
-    name: "Emily and James T",
-    title: "Satisfied Homeowners",
-    img: img1,
-    text: "Asset Worldwide turned our empty property into a stunning, market-ready home. The transformation was beyond our expectations. Their attention to detail and commitment to delivering on time truly sets them apart. We couldn't be happier with the result!",
+    text: "We've been renting with Asset Worldwide Ltd for a while now, and we couldn't be happier with their service. From the moment we moved in, they've been incredibly responsive to any concerns or maintenance issues we've had. Their professionalism and efficiency make renting with them a breeze. We highly recommend their service to anyone in search of a reliable and tenant-friendly property management company.",
   },
 ];
 

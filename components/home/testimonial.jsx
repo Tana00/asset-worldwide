@@ -4,16 +4,6 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 import { customersList } from "./Experiences";
-// import "./TestimonialSlider.css";
-
-const testimonials = [
-  { id: 1, text: "Testimonial 1" },
-  { id: 2, text: "Testimonial 2" },
-  { id: 3, text: "Testimonial 3" },
-  { id: 4, text: "Testimonial 4" },
-  { id: 5, text: "Testimonial 5" },
-  // Add more testimonials as needed
-];
 
 const TestimonialSlider = () => {
   const [startIndex, setStartIndex] = useState(0);
@@ -27,26 +17,23 @@ const TestimonialSlider = () => {
 
   const handleNext = () => {
     const slidesToShow = getSlidesToShow();
-    const nextStartIndex = Math.min(
-      startIndex + slidesToShow,
-      testimonials.length - slidesToShow
-    );
-    const nextEndIndex = Math.min(endIndex + slidesToShow, testimonials.length);
     setStartIndex(startIndex + slidesToShow);
     setEndIndex(endIndex + slidesToShow);
   };
 
   const handlePrev = () => {
     const slidesToShow = getSlidesToShow();
-    const prevStartIndex = Math.max(startIndex - slidesToShow, 0);
-    const prevEndIndex = Math.max(endIndex - slidesToShow, slidesToShow);
     setStartIndex(startIndex - slidesToShow);
     setEndIndex(endIndex - slidesToShow);
   };
 
   const getSlidesToShow = () => {
-    if (window.innerWidth >= 1440) {
+    if (window.innerWidth >= 2040) {
       // Desktop
+      return 4;
+    }
+    if (window.innerWidth >= 1440) {
+      // Laptop
       return 3;
     } else if (window.innerWidth >= 1024) {
       // Tablet
@@ -58,7 +45,7 @@ const TestimonialSlider = () => {
   };
 
   const isPrevDisabled = startIndex === 0;
-  const isNextDisabled = endIndex >= testimonials.length;
+  const isNextDisabled = endIndex >= customersList.length;
 
   return (
     <div>
@@ -72,30 +59,45 @@ const TestimonialSlider = () => {
               What our customers say about us.
             </p>
           </div>
-          <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 items-center justify-center w-11/12 md:w-10/12 mx-auto">
+          <div className="mt-10 flex items-center xl:grid grid-cols-3 3xl:grid-cols-4 gap-4 justify-center w-11/12 lg:w-10/12 2xl:w-3/4 mx-auto">
             {customersList
               .slice(startIndex, endIndex)
               .map((customer, index) => (
                 <div
                   key={customer.id}
-                  className={` number-slide${index} relative !min-w-min snap-start mx-auto`}
+                  className={`number-slide${index} relative !min-w-min snap-start mx-auto`}
                   style={{ minWidth: "auto" }}
                 >
-                  <div className="w-[360px] h-[476px] flex flex-col justify-center items-center gap-4 p-4 bg-white rounded-lg">
+                  <div className="w-[360px] h-[626px] flex flex-col justify-start items-center gap-4 p-4 bg-white rounded-lg">
                     <div className="w-20 h-20 absolute -top-[40px] z-10">
-                      <Image
+                      {/* <Image
                         src={customer.img}
                         alt="exp-1"
                         className="w-full h-full object-cover object-center rounded-lg"
-                      />
+                      /> */}
+                      <div class="h-20 w-20 overflow-hidden rounded-full">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          class="h-20 w-20 p-5 text-black bg-[#eee] stroke-current"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                          ></path>
+                        </svg>
+                      </div>
                     </div>
-                    <div className="flex flex-col items-stretch px-6 mt-8">
+                    <div className="flex flex-col items-stretch px-6 mt-20">
                       <p className="text-primary-green text-[1.125rem] font-bold font-Avenir-Black">
-                        {customer.name}
-                      </p>
-                      <p className="text-black text-[0.875rem] font-Avenir-Regular">
                         {customer.title}
                       </p>
+                      {/* <p className="text-black text-[0.875rem] font-Avenir-Regular">
+                        {customer.title}
+                      </p> */}
                       <p className="text-black text-[0.875rem] font-Avenir-Regular mt-4 leading-8">
                         {customer.text}
                       </p>

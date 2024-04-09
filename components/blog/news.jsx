@@ -23,8 +23,6 @@ export const News = () => {
     setCurrentPage(page);
   };
 
-  console.log(paginatedNews, slicedNews)
-
   return (
     <div className="w-full md:w-4/5 lg:w-11/12 xl:w-4/5 mx-auto mt-8 md:mt-16 px-4 sm:px-8 md:px-4 h-full flex flex-col">
       <div className="h-full flex flex-col">
@@ -194,7 +192,9 @@ export const News = () => {
                     <span className="block -mt-2 md:mt-2">
                       {title?.split(":")?.[1]}
                     </span>
-                  ) :  <span className="block -mt-2 md:mt-2"></span>}
+                  ) : (
+                    <span className="block -mt-2 md:mt-2"></span>
+                  )}
                 </p>
                 <p className="text-[#000] text-sm md:text-[1.125rem] leading-[32px] font-Avenir-Regular line-clamp-3">
                   {content}
@@ -219,8 +219,8 @@ export const News = () => {
                 </Link>
               </div>
             </div>
-              // )}
-                  ))}
+            // )}
+          ))}
         </div>
         <div className="flex justify-center mt-8">
           {Array.from({ length: totalPages }, (_, index) => (

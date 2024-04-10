@@ -300,9 +300,9 @@ video {
     margin-top: 20%;
   }
 }
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1025px) and (max-width: 1439px) {
   .service_image {
-    margin-top: 32%;
+    margin-top: 30%;
   }
 }
 

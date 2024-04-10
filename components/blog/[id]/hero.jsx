@@ -4,7 +4,7 @@ export const Hero = ({ blog }) => {
   return (
     <FadeIn classname="lg:!pb-16">
       <div
-        className="w-full h-[40vh] md:h-[70vh] xsl:h-[80vh] 2xl:h-[70vh] single-blog-image flex flex-col justify-center"
+        className="w-full h-[40vh] md:h-[70vh] xsl:h-[80vh] 2xxl:h-[70vh] single-blog-image flex flex-col justify-center"
         style={{
           backgroundImage: `url('${blog?.img}')`,
         }}

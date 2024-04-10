@@ -70,17 +70,17 @@ const Team = () => {
                 Who are the people who make up Asset Worldwide
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 4xl:grid-cols-4 gap-y-10 gap-x-4 md:gap-10 xl:gap-y-10 3xl:gap-y-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 4xl:grid-cols-4 gap-y-10 gap-x-4 xl:gap-y-10 3xl:gap-y-16">
               {teamList.map((member) => (
                 <div
                   key={member.id}
                   className="w-11/12 h-[600px] mx-auto flex flex-col items-center gap-4 py-6 rounded-lg bg-white border-b-4 border-primary-gold"
                 >
-                  <div className="w-full flex items-center justify-center border-primary-gold border-b py-4">
+                  <div className="w-full flex items-center justify-center border-primary-gold border-b pb-2">
                     <Image
                       src={member.img}
                       alt={member.name}
-                      className="w-28 h-44 object-contain"
+                      className="w-24 h-40 object-contain"
                     />
                   </div>
                   <div className="flex flex-col gap-2 py-4 px-6">
@@ -90,7 +90,7 @@ const Team = () => {
                     <h3 className="text-grey text-xs xl:text-sm font-bold">
                       {member.title}
                     </h3>
-                    <p className="mt-4 text-[#000] text-sm xl:text-base 2xl:text-[17px] !leading-8 font-light 3xl:w-2/3 mx-auto font-Avenir-Regular">
+                    <p className="mt-4 text-[#000] text-sm xl:text-base 2xl:text-[17px] !leading-8 font-light 3xl:w-4/5 mx-auto font-Avenir-Regular">
                       {member.description}
                     </p>
                   </div>

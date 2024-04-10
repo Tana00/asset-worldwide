@@ -231,7 +231,7 @@ video {
 }
 .blog .table-wrapper {
   width: 100%;
-  overflow: scroll;
+  overflow: auto;
 }
 .blog table {
   width: 100%;
@@ -279,7 +279,7 @@ video {
   margin-left: 1.4rem;
 }
 .blog ul li {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .service_image {
@@ -298,6 +298,11 @@ video {
 @media (min-width: 1536px) and (max-width: 2000px) {
   .service_image {
     margin-top: 20%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .service_image {
+    margin-top: 32%;
   }
 }
 

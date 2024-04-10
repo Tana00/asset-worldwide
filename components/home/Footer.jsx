@@ -11,7 +11,9 @@ const Footer = () => {
     <footer className="w-full h-full flex justify-end items-end mt-16">
       <div className="h-full w-full bg-[#f7f7f7] flex flex-col lg:flex-row justify-around items-start py-5 pt-12 px-4 md:px-10 lg:px-4">
         <div className="w-auto sm:w-[300px] h-auto">
-          <Image src={logo} alt="" className="w-full h-full object-contain" />
+          <Link href="/">
+            <Image src={logo} alt="" className="w-full h-full object-contain" />
+          </Link>
         </div>
         <div className="flex flex-col gap-6 lg:gap-14 h-full justify-between mt-6 md:mt-10 lg:mt-0">
           <div className="flex flex-col md:flex-row gap-6 lg:gap-12">

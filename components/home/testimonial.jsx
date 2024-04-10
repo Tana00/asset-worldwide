@@ -32,7 +32,7 @@ const TestimonialSlider = () => {
       // Desktop
       return 4;
     }
-    if (window.innerWidth >= 1440) {
+    if (window.innerWidth >= 1340) {
       // Laptop
       return 3;
     } else if (window.innerWidth >= 1024) {
@@ -59,7 +59,7 @@ const TestimonialSlider = () => {
               What our customers say about us.
             </p>
           </div>
-          <div className="mt-10 flex items-center xl:grid grid-cols-3 3xl:grid-cols-4 gap-4 justify-center w-11/12 lg:w-10/12 2xl:w-3/4 mx-auto">
+          <div className="mt-10 flex items-center 2xxl:grid grid-cols-3 gap-4 justify-center w-11/12 lg:w-10/12 2xl:w-3/4 mx-auto">
             {customersList
               .slice(startIndex, endIndex)
               .map((customer, index) => (

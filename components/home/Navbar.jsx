@@ -71,7 +71,7 @@ const Navbar = () => {
   }, [show]);
 
   return (
-    <nav className="w-full md:w-11/12 lg:w-4/5 xl:w-11/12 2xxl:w-4/5 mx-auto flex justify-between items-center px-4 xl:px-0 2xxl:px-4 my-4 md:my-6 bg-white font-Avenir">
+    <nav className="w-full md:w-11/12 lg:w-4/5 xl:w-11/12 2xl:w-4/5 mx-auto flex justify-between items-center px-4 xl:px-0 2xl:px-4 my-4 md:my-6 bg-white font-Avenir">
       <div className="">
         <Link href="/">
           <Image src={logo} alt="logo" className="" />
@@ -134,7 +134,7 @@ const Navbar = () => {
       {/*  Add a book Appointment button */}
       <Link
         href="/contact-us"
-        className="hidden xl:flex bg-primary-green 2xxl:ml-12 text-white rounded-md font-avenir text-base font-semibold py-2.5 px-4 hover:bg-primary-gold hover:text-white transition duration-300"
+        className="hidden xl:flex bg-primary-green 2xl:ml-12 text-white rounded-md font-avenir text-base font-semibold py-2.5 px-4 hover:bg-primary-gold hover:text-white transition duration-300"
       >
         Book Appointment
       </Link>

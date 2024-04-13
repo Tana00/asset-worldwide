@@ -56,14 +56,14 @@ const Footer = () => {
       <div className="max-w-[1920px] px-5 sm:px-10 lg:px-20 xl:px-40 mx-auto w-full">
         <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr] lg:grid-cols-[minmax(400px,_700px)_200px_200px_200px] gap-y-8 items-start justify-between">
           <div className="">
-            <a href="/">
+            <Link href="/">
               <Image
                 src="/assets/images/logo.svg"
                 alt="logo"
                 width={150}
                 height={150}
               />
-            </a>
+            </Link>
           </div>
           {footerLinks.map((link, i) => (
             <div

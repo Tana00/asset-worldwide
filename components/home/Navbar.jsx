@@ -71,14 +71,14 @@ const Navbar = () => {
   }, [show]);
 
   return (
-    <nav className="w-full md:w-11/12 lg:w-4/5 xl:w-11/12 2xl:w-4/5 mx-auto flex justify-between items-center px-4 xl:px-0 2xl:px-4 my-4 md:my-6 bg-white font-Avenir">
+    <nav className="w-full md:w-11/12 lg:w-4/5 xl:w-10/12 2xl:w-4/5 mx-auto flex justify-between items-center px-4 xl:px-0 2xl:px-4 my-4 md:my-6 bg-white font-Avenir">
       <div className="">
         <Link href="/">
           <Image src={logo} alt="logo" className="" />
         </Link>
       </div>
 
-      <div className="hidden xl:flex items-center justify-center gap-14 mx-8">
+      <div className="hidden xl:flex items-center justify-center gap-14 lg:gap-10 2xl:gap-14 mx-8">
         {links.map((link, index) => {
           const { id, url, text, subLinks } = link;
           if (subLinks) {

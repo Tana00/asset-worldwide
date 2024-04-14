@@ -11,7 +11,7 @@ const data = [
     id: 2,
     icon: "/images/address.svg",
     title: "Address",
-    desc: "London, UK",
+    desc: "Unit 3&4 Lustleigh Close, Marsh Barton Trading Estate, Exeter, United Kingdom, EX2 8PW",
   },
   {
     id: 3,
@@ -24,16 +24,19 @@ const data = [
 export const CTA = () => {
   return (
     <div className="bg-green-light w-full h-full flex flex-col justify-center py-16 px-10 xl:py-28 lg:mt-10 mx-auto">
-      <div className="w-full lg:w-4/5 2xl:w-3/5 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-start gap-y-10">
+      <div className="w-full lg:w-4/5 2xl:w-3/5 mx-auto grid lg:flex justify-between items-start grid-cols-1 sm:grid-cols-2 text-start gap-y-10">
         {data?.map((item, i) => (
           <div
             key={item?.id}
-            className={`flex flex-col items-start gap-4 text-black w-fit ${
+            className={`flex flex-col items-start gap-4 text-black w-full ${
               item.id === 3
-                ? ""
-                : "md:border-r border-grey border-opacity-20 md:pr-14 lg:pr-20 xl:pr-36"
+                ? "lg:pl-14 border-none"
+                : item.id === 1
+                ? "md:pr-14"
+                : "md:px-14 md:border-l lg:border-x border-grey border-opacity-20 lg:w-[100rem]"
             }`}
           >
+            {/* md:border-r border-grey border-opacity-20 md:pr-14 lg:pr-20 xl:pr-36 */}
             <Image
               src={item.icon}
               alt={item.title}
